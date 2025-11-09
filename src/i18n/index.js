@@ -1,6 +1,7 @@
 import { createI18n } from 'vue-i18n'
+import en from './locales/en.json'
+import sr from './locales/sr.json'
 
-// početni jezik: memorisan ili iz browsera
 function getStartingLocale() {
   const saved = localStorage.getItem('lang')
   if (saved) return saved
@@ -12,10 +13,7 @@ export const i18n = createI18n({
   legacy: false,
   locale: getStartingLocale(),
   fallbackLocale: 'en',
-  messages: {
-    en: (await import('./locales/en.json')).default,
-    sr: (await import('./locales/sr.json')).default
-  }
+  messages: { en, sr },
 })
 
 export function setLocale(lang) {
