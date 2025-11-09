@@ -1,0 +1,16 @@
+{
+  "brand": "ProfiSajt.digital",
+  "hero": {
+    "badge_alt_01": "Avatar 01",
+    "badge_alt_02": "Avatar 02",
+    "badge_alt_03": "Avatar 03",
+    "badge_alt_04": "Avatar 04",
+    "badge_alt_05": "Avatar 05",
+    "badge_alt_06": "Avatar 06",
+    "title_line1": "The website builder you're",
+    "title_line2": "looking for",
+    "subtitle": "Simple is a modern website builder powered by AI that changes how companies create user interfaces together.",
+    "cta_primary": "Start Free Trial",
+    "cta_secondary": "Learn More"
+  }
+}
