@@ -13,5 +13,7 @@ export default defineConfig({
       { find: '@', replacement: fileURLToPath(new URL('./src', import.meta.url)) },
     ],
   },
+
+  build: { target: 'es2022' },
   // >>> ukloni bilo kakav "define: { 'process.env': process.env }" ako ga ima <<<
 })
