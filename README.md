@@ -46,11 +46,9 @@ Najvažnije putanje:
 ## 🚀 Instalacija i razvoj
 
 ### 1. Kloniranje repozitorijuma
-
-   
-git clone https://github.com/Express-Web/profisajt-frontend.git
-cd profisajt-frontend
-(URL prilagodi kada napraviš pravi Git repo.)
+  
+git clone https://github.com/RadojeBozic/ProfiSajt-Digital
+cd ProfiSajt-Digital
 
 2. Instalacija paketa
 npm install
