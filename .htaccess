@@ -1,5 +1,15 @@
 RewriteEngine On
-# SPA fallback
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ /index.html [L]
+
+# 1) Propusti prave fajlove i foldere (slike, css, js…)
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 2) NE diraj backend/API i PHP (ako ih imaš)
+RewriteCond %{REQUEST_URI} ^/api/ [OR]
+RewriteCond %{REQUEST_URI} ^/blog/ [OR]
+RewriteCond %{REQUEST_URI} \.php$
+RewriteRule ^ - [L]
+
+# 3) Sve ostalo vrati na SPA entry
+RewriteRule ^ index.html [L]

@@ -32,7 +32,7 @@ import Footer from './../partials/Footer.vue'
     </main>
 
     <!-- Site footer -->
-    <Footer />
+    <Footer :border="true" />
 
   </div>
 </template>

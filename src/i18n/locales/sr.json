@@ -1,16 +1,889 @@
 {
   "brand": "ProfiSajt.digital",
   "hero": {
-    "badge_alt_01": "Avatar 01",
-    "badge_alt_02": "Avatar 02",
-    "badge_alt_03": "Avatar 03",
-    "badge_alt_04": "Avatar 04",
-    "badge_alt_05": "Avatar 05",
-    "badge_alt_06": "Avatar 06",
-    "title_line1": "Kreator sajtova koji ste",
-    "title_line2": "tražili",
-    "subtitle": "Simple je moderan kreator sajtova zasnovan na AI tehnologiji koji menja način na koji timovi zajedno prave korisničke interfejse.",
-    "cta_primary": "Započni besplatno",
-    "cta_secondary": "Saznaj više"
+  "badge_alt_01": "Vlasnik malog biznisa",
+  "badge_alt_02": "Preduzetnik",
+  "badge_alt_03": "Freelance dizajner",
+  "badge_alt_04": "Online prodavnica",
+  "badge_alt_05": "Marketing tim",
+  "badge_alt_06": "Startap tim",
+
+  "badge_text": "Preduzetnici, mali biznisi, frilenseri i timovi koji žele da izađu online na pravi način.",
+
+  "micro_promise": "Za 10 do 30 dana do funkcionalnog sajta spremnog za promociju.",
+
+  "title_line1": "Napravi svoj sajt, prodavnicu",
+  "title_line2": "i kampanju uz mentora i AI",
+
+  "subtitle": "ProfiSajt.digital je platforma za učenje i konkretnu pomoć pri izradi sajtova, online prodavnica i kampanja. Kombinujemo edukaciju, gotove šablone, AI asistente i realnu podršku kako bi tvoj projekat što brže izašao na internet – sigurno i spremno za promociju.",
+
+  "cta_primary": "Započnite uz besplatan savet",
+  "cta_secondary": "Pogledajte šta nudimo",
+  "code_title": "profisajt.digital",
+  "code_line1": "profisajt init my-website",
+  "code_line2": "✔ Izabran tip sajta: WordPress / Custom",
+  "code_line3": "✔ Dodata online prodavnica",
+  "code_line4": "✔ Povezana analitika i osnovna zaštita",
+  "code_line5": "profisajt deploy",
+  "code_line6": "✔ Vaš sajt je online. Sledeći korak: kampanja."
+},
+"business": {
+  "tabs": {
+    "startups": "Mali biznisi i startupi",
+    "webapps": "Web sajtovi i blogovi",
+    "ecommerce": "Online prodavnice i e-commerce",
+    "enterprise": "Kompleksniji sistemi i firme"
+  },
+   "content": {
+    "startups_title": "Za male biznise i startape",
+    "startups_body": "Ako si na početku – pomažemo ti da od ideje dođeš do prvog sajta i prve kampanje. Jednostavni šabloni, jasna struktura, pomoć oko teksta i vizuala – bez nepotrebne komplikacije.",
+
+    "webapps_title": "Web sajtovi, blogovi i portali",
+    "webapps_body": "Bilo da ti treba prezentacioni sajt, blog ili manji portal, vodićemo te kroz izbor platforme (WordPress, Webflow, custom rešenje) i pomoći da sve bude spremno za SEO i promociju.",
+
+    "ecommerce_title": "Online prodavnice i e-commerce sistemi",
+    "ecommerce_body": "Od jednostavnih prodavnica do ozbiljnijih e-commerce rešenja – pomažemo ti da izabereš pravu platformu, organizuješ proizvode, podešavaš plaćanje i pripremiš kampanje koje dovode prodaju.",
+
+    "enterprise_title": "Kompleksniji sistemi i firme",
+    "enterprise_body": "Za firme kojima treba više od klasičnog sajta – prilagođene aplikacije, integracije sa postojećim sistemima, multivendor rešenja i specifični poslovni procesi, uz konsultacije i dugoročno planiranje."
+  }
+},
+"testimonials": {
+  "items": [
+    {
+      "quote": "U početnoj fazi rada ove platforme, bio sam skeptičan, ali rezultati su brzo došli. Ovaj sistem je promenio način na koji poslujem.",
+      "name": "Miroslav Božić",
+      "role": "Osnivač Agro-BiM"
+    },
+    {
+      "quote": "Ovaj sistem mi je pomogao da bolje organizujem svoje vreme i resurse. Sada mogu da se fokusiram na ono što je zaista važno. Agencija ProfiSajt je profesionalna i efikasna.",
+      "name": "Bojana Popić",
+      "role": "Osnivač Agro-BiM"
+    },
+    {
+      "quote": "Agencija ProfiSajt je transformisala naše online prisustvo. Njihov tim je izuzetno profesionalan i posvećen. Svi naši zahtevi su ispunjeni na vreme i sa visokim kvalitetom.",
+      "name": "Zoran Stojanović",
+      "role": "Metox DOO"
+    }
+  ]
+},
+  "featuresPlanet": {
+  "heading": "Kompanije od strateškog značaja za kvalitetan rast na internetu",
+  "subheading": "Ne prodajemo priču o tome da sve radimo sami. Oslanjamo se na proverene globalne platforme za hosting, AI, dizajn, domene i oglašavanje – i pomažemo vam da ih iskoristite za svoj biznis.",
+  "planetAlt": "Ekosistem partnera oko ProfiSajt.digital platforme",
+  "planetDecorAlt": "Dekorativni overlay koji simbolizuje umrežavanje i rast",
+  "tags": {
+    "cloudways": "Cloudways – upravljani cloud hosting",
+    "canva": "Canva – vizuelni identitet i dizajn",
+    "google": "Google – pretraga, analitika i oglasi",
+    "meta": "Meta – Facebook i Instagram oglašavanje",
+    "namecheap": "Namecheap – registracija domena i DNS"
+  },
+  "cards": {
+    "ai": {
+      "title": "Veštačka inteligencija (AI asistenti)",
+      "desc": "Korišćenje AI alata za pisanje tekstova, analizu kampanja, generisanje ideja i podršku pri izradi sajtova i online prodavnica."
+    },
+    "cloud": {
+      "title": "Cloud hosting (Cloudways)",
+      "desc": "Brzi i sigurni serveri za vaše sajtove i aplikacije, sa fokusom na performanse, sigurnost i skaliranje kada poslovanje raste."
+    },
+    "design": {
+      "title": "Dizajn i vizuelni identitet (Canva)",
+      "desc": "Izrada banera, objava za mreže, prezentacija i vizuelnih elemenata koji prate vaš sajt i kampanje, bez potrebe za skupim alatima."
+    },
+    "domains": {
+      "title": "Domene i DNS (Namecheap)",
+      "desc": "Pouzdana registracija domena, SSL sertifikati i DNS podešavanja – sve što je potrebno da vaš brend bude vidljiv i siguran online."
+    },
+    "google": {
+      "title": "Google alati: pretraga, analitika i Ads",
+      "desc": "Postavljanje Google Analytics, Search Console i Google Ads kampanja kako biste jasno videli šta radi, a šta treba optimizovati."
+    },
+    "metaAds": {
+      "title": "Meta oglasi: Facebook i Instagram",
+      "desc": "Planiranje i podešavanje kampanja na Meta mreži – od prvih test kampanja do dugoročne strategije oglašavanja za vaš biznis."
+    }
+  }
+},
+   "testimonial": {
+    "alt": "Velika preporuka",
+    "quote_part1": "ProfiSajt.digital mi je pojednostavio život na više načina. Od upravljanja mojim sajtovima do",
+    "quote_highlight": "praćenja zadataka",
+    "quote_part2": "postao je moj glavni alat za sve.",
+    "author": "Marija Stojanović",
+    "position": "CTO u Microsoftu"
+  },
+  "featuresHome": {
+  "heading": "Šta vaš sajt dobija „ispod haube“",
+  "sub": "Ne pravimo samo lep dizajn. Od prvog dana dobijate spremnu strukturu, dobru čitljivost na svim uređajima, osnovnu SEO postavku, analitiku i sigurnosne osnove – da biste mogli odmah da krenete u kampanje.",
+  "windowTitle": "profisajt.digital · setup",
+  "overlay01Alt": "Pregled osnovnih podešavanja sajta i strukture",
+  "overlay02Alt": "Podešavanje sadržaja, blog sekcija i stranica",
+  "overlay03Alt": "Pregled performansi, analitike i ključnih metrika",
+  "cards": {
+    "opt": {
+      "title": "Korisničko iskustvo (UX) i struktura",
+      "desc": "Jasna navigacija, logičan raspored sekcija, vidljivi pozivi na akciju i sadržaj prilagođen cilju – da posetilac brzo razume šta nudite i šta je sledeći korak."
+    },
+    "cookie": {
+      "title": "Privatnost, kolačići i osnove sigurnosti",
+      "desc": "Priprema kolačić banera, stranica sa Politikom privatnosti i osnovna sigurnosna podešavanja – kako biste bili bliže usklađenosti sa pravilima i zaštitili podatke korisnika."
+    },
+    "domain": {
+      "title": "Domen, SSL i tehnička postavka",
+      "desc": "Povezivanje prilagođenog domena, aktivan SSL sertifikat, osnovne redirekcije i tehničke postavke – da sajt radi stabilno i da pretraživači lakše razumeju vaš sadržaj."
+    }
+  },
+  "cli": {
+    "line1": "profisajt new my-website",
+    "line2": "✔ Tip: prezentacioni sajt + blog",
+    "line3": "✔ Prilagođen mobilnim uređajima",
+    "line4": "✔ Osnovna SEO i analitika podešena",
+    "line5": "profisajt deploy",
+    "line6": "✔ Sajt povezan sa domenom i SSL sertifikatom"
+  }
+},
+  "testimonialsCarousel": {
+  "heading": "Četiri stuba našeg poslovanja",
+  "subheading": "Sve što radimo zasniva se na pouzdanim tehnologijama, stručnom timu, ozbiljnom digital marketingu i bezbednosti na internetu.",
+
+  "items": [
+    {
+      "name": "Pouzdane tehnologije i platforme",
+      "username": "@tehnologije",
+      "date": "Stub 1",
+      "content": "Radimo sa proverenim tehnologijama kao što su Laravel, Vue, WordPress i specijalizovana e-commerce rešenja. Cilj je da vaš sajt ili aplikacija budu stabilni, brzi i spremni za rast.",
+      "channel": "Tehnologije"
+    },
+    {
+      "name": "Stručan tim i mentorski pristup",
+      "username": "@tim",
+      "date": "Stub 2",
+      "content": "Ne nudimo samo izradu sajta, već i znanje. Kroz edukaciju, savete i podršku pomažemo preduzetnicima, malim biznisima i timovima da razumeju svoj digitalni nastup i donose bolje odluke.",
+      "channel": "Tim i mentorstvo"
+    },
+    {
+      "name": "Digitalni marketing i rast",
+      "username": "@marketing",
+      "date": "Stub 3",
+      "content": "Od prvog dana razmišljamo o kampanjama, sadržaju, pozicioniranju na internetu i oglasima. Sajt nije cilj – cilj je da dobijete više upita, više kupaca i merljive rezultate.",
+      "channel": "Marketing"
+    },
+    {
+      "name": "Bezbednost i poverenje",
+      "username": "@security",
+      "date": "Stub 4",
+      "content": "Vodimo računa o bezbednosti: SSL, backup, zaštita naloga, ažuriranja i dobre prakse. Želimo da se vaši korisnici osećaju sigurno, a da vi imate mirnu glavu.",
+      "channel": "Bezbednost"
+    }
+  ]
+},
+  "cta": {
+    "heading": "Kreirajte svoj sledeći projekat uz ProfiSajt.digital",
+    "primary": "Započni besplatno",
+    "stripesAlt": "Pruge (ilustracija)",
+    "subtext": "Pogledajte kako smo izgradili digitalna rešenja za naše klijente. Istražite naše procese, tehnologije i stil."
+  },
+ "footer": {
+  "brand": "ProfiSajt.digital",
+  "logoAria": "Početna - ProfiSajt.digital",
+  "copyright": "Sva prava zadržana.",
+  "sections": {
+    "services": {
+      "title": "Usluge",
+      "links": [
+        "Izrada sajtova",
+        "Online prodavnice",
+        "Marketplace rešenja",
+        "AI asistenti i automatizacija",
+        "Digital marketing"
+      ]
+    },
+    "company": {
+      "title": "Kompanija",
+      "links": [
+        "O nama",
+        "Projekti",
+        "Blog",
+        "Karijera"
+      ]
+    },
+    "legal": {
+      "title": "Pravna dokumenta",
+      "links": [
+        "Uslovi korišćenja",
+        "Politika privatnosti",
+        "Politika kolačića (cookies)"
+      ]
+    },
+    "social": {
+      "title": "Društvene mreže",
+      "linkedin": "LinkedIn",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "github": "GitHub"
+    }
+  },
+  "bigText": {
+    "line1": "Profi Sajt",
+    "line2": "Sajt"
+  }
+},
+"about_footer": {
+  "badge": "Ko stoji iza projekta",
+  "heading": "ProfiSajt.digital je više od još jedne „izrade sajtova“",
+  "lead": "Spajamo iskustvo iz realnog sektora, razvoj web tehnologija i digitalni marketing u jedan sistem koji pomaže malim i srednjim biznisima da rastu.",
+  "sections": {
+    "mission": {
+      "title": "Naša misija",
+      "body": "Naša misija je da vlasnicima biznisa pojednostavimo digitalni deo posla: da znaju šta im treba, koliko košta i šta dobijaju zauzvrat – bez sitnih slova i magle."
+    },
+   
+    "howWeWork": {
+      "title": "Kako radimo",
+      "body": "Radimo transparentno, u fazama i uz jasne ciljeve. Svaki projekat posmatramo kao partnerstvo, ne kao jednokratnu uslugu.",
+      "points": {
+        "0": "Prvo slušamo – upoznajemo vaš biznis, tržište i ciljeve.",
+        "1": "Zatim predlažemo realno izvodljivo rešenje, ne „najskuplje moguće“.",
+        "2": "Na kraju merimo rezultate i predlažemo dalje korake, umesto da vas ostavimo same."
+      }
+    },
+    "signatureTitle": "Zašto je ovo važno?",
+    "signatureBody": "Digitalni kanali su danas često presudni za opstanak biznisa. Naš cilj je da vam budu saveznik, a ne dodatna obaveza od koje vas boli glava."
+  }
+},
+"services": {
+  "badge": "Usluge",
+  "heading": "Šta konkretno možemo da uradimo za vaš biznis",
+  "lead": "Od jednostavnih prezentacionih sajtova do kompleksnih marketplace sistema – gradimo rešenja koja imaju smisla za vaš trenutni nivo i plan rasta.",
+  "items": [
+    {
+      "title": "Izrada sajtova",
+      "desc": "Moderne, brze i pregledne web prezentacije prilagođene svim uređajima – idealne za kompanije, udruženja, projekte i lične brendove.",
+      "note": "Podrška za više jezika i kasnije proširenje na blog ili online prodavnicu."
+    },
+    {
+      "title": "Online prodavnice",
+      "desc": "Izrada e-commerce rešenja sa fokusom na jednostavnu kupovinu, sigurnu naplatu i jasnu administraciju proizvoda, kategorija i porudžbina.",
+      "note": "Mogućnost povezivanja sa dostavom, fakturisanjem i lagerom u kasnijim fazama."
+    },
+    {
+      "title": "Marketplace rešenja",
+      "desc": "Multivendor platforme na kojima više prodavaca može da nudi svoje proizvode ili usluge – idealno za nišne zajednice i specijalizovana tržišta.",
+      "note": "Radno iskustvo sa Bagisto ekosistemom i kompleksnijim modelima naplate i provizija."
+    },
+    {
+      "title": "AI asistenti i automatizacija",
+      "desc": "Implementacija AI chatbota, podrške za korisnike, generisanje sadržaja i automatizacija ponavljajućih zadataka u vašem poslovanju.",
+      "note": "Poseban fokus na praktična rešenja koja štede vreme, a ne prave dodatnu komplikaciju."
+    },
+    {
+      "title": "Digital marketing",
+      "desc": "Planiranje i postavljanje kampanja na Google i Meta mreži, uz osnovnu SEO optimizaciju i sadržaj prilagođen vašoj ciljnoj grupi.",
+      "note": "Cilj nam je da marketing donosi merljive rezultate, ne samo „lajkove“."
+    }
+  ],
+  "footerNote": "Sve usluge možemo kombinovati u fazama – počinjemo od onoga što vam je sada realno potrebno, uz jasan plan šta je sledeći korak."
+},
+ "pages": {
+  "blog": {
+    "title": "Blog",
+    "subtitle": "U pripremi je blog sa temama iz developmenta, digitalnog marketinga i AI alata.",
+    "soonTitle": "Uskoro!",
+    "soonText": "Aktivno radimo na pripremi članaka. Biće saveta, tutorijala, detaljnih vodiča i analiza tržišta."
+  }
+},
+"terms": {
+  "heading": "Uslovi korišćenja",
+  "updated": "Poslednja izmena: 2025.",
+  "intro": "Korišćenjem platforme ProfiSajt.digital pristajete na ove uslove korišćenja. Ako se ne slažete, molimo vas da ne koristite naš sajt, usluge ili kontakt forme.",
+  
+  "section1": {
+    "title": "1. Karakter platforme",
+    "text": "ProfiSajt.digital posluje u okviru zajednice express-web i nudi usluge izrade sajtova, online prodavnica, marketplace rešenja, digitalnog marketinga, AI asistenata i edukacije. Sadržaj na sajtu je informativnog i edukativnog karaktera."
+  },
+
+  "section2": {
+    "title": "2. Korišćenje sadržaja",
+    "text": "Sav sadržaj (tekstovi, slike, kod, dizajn i dokumentacija) je vlasništvo ProfiSajt.digital. Zabranjeno je kopiranje, distribucija ili komercijalna upotreba bez odobrenja. Dozvoljeno je korišćenje u okviru projekata koji su deo ugovorene usluge."
+  },
+
+  "section3": {
+    "title": "3. Odgovornost korisnika",
+    "text": "Korisnik se obavezuje da ne koristi platformu za nezakonite aktivnosti, spam ili pokušaje narušavanja bezbednosti sajta. Zabranjeno je slanje lažnih podataka kroz kontakt forme. Zadržavamo pravo da odbijemo saradnju."
+  },
+
+  "section4": {
+    "title": "4. Ograničenje odgovornosti",
+    "text": "Trudimo se da obezbedimo tačan i ažuran sadržaj, ali ne garantujemo neprekidan rad sajta, potpunu tačnost informacija ili kompatibilnost sa svim uređajima. Ne snosimo odgovornost za štetu nastalu korišćenjem platforme."
+  },
+
+  "section5": {
+    "title": "5. Komunikacija i ponude",
+    "text": "Slanjem podataka preko kontakt formi pristajete na komunikaciju putem e-pošte. Ponude i procene nisu pravno obavezujuće dok ne dođe do formalnog dogovora."
+  },
+
+  "section6": {
+    "title": "6. Izmene uslova",
+    "text": "ProfiSajt.digital može izmeniti uslove korišćenja u bilo kom trenutku bez prethodne najave. Datum poslednje izmene se nalazi na vrhu dokumenta."
+  },
+
+  "contact": {
+    "title": "Kontakt",
+    "text": "Za dodatne informacije kontaktirajte nas putem adrese e-pošte: info{'@'}profisajt.digital"
+  }
+},
+"cookies": {
+  "heading": "Politika kolačića",
+  "updated": "Poslednje ažuriranje: januar 2025",
+  "intro": "Ovaj dokument objašnjava kako ProfiSajt.digital koristi kolačiće i slične tehnologije radi poboljšanja funkcionalnosti platforme, sigurnosti i korisničkog iskustva.",
+
+  "section1": {
+    "title": "1. Šta su kolačići?",
+    "text": "Kolačići su male tekstualne datoteke koje se čuvaju na vašem uređaju kada posetite naš sajt. Oni omogućavaju pravilno funkcionisanje platforme, poboljšavaju performanse i omogućavaju osnovnu analitiku."
+  },
+
+  "section2": {
+    "title": "2. Koje tipove kolačića koristimo?",
+    "text": "Koristimo samo tipove kolačića koji su neophodni za rad platforme ili pomažu u poboljšanju korisničkog iskustva."
+  },
+
+  "section2List": {
+    "item1": "Obavezni kolačići — omogućavaju osnovne funkcije sajta i ne mogu biti isključeni.",
+    "item2": "Funkcionalni kolačići — omogućavaju pamćenje vaših podešavanja i preferenci jezika.",
+    "item3": "Analitički kolačići — služe isključivo za anonimnu statistiku korišćenja platforme."
+  },
+
+  "section3": {
+    "title": "3. Kako možete upravljati kolačićima?",
+    "text": "Kolačićima možete upravljati kroz podešavanja vašeg pretraživača. Možete ih obrisati, blokirati ili podesiti da se prikazuje upozorenje pre njihovog čuvanja."
+  },
+
+  "section4": {
+    "title": "4. Promene politike kolačića",
+    "text": "Politika kolačića može biti povremeno ažurirana radi usklađivanja sa zakonskim propisima ili unapređenja naših servisa."
+  },
+
+  "section5": {
+    "title": "5. Kontakt",
+    "text": "Za dodatne informacije o kolačićima možete nas kontaktirati putem: info (at) profisajt.digital"
+  }
+},
+"privacy": {
+  "heading": "Politika privatnosti",
+  "updated": "Poslednje ažuriranje: januar 2025.",
+  "intro": "Ovaj dokument objašnjava kako prikupljamo, obrađujemo i čuvamo vaše podatke prilikom korišćenja platforme ProfiSajt.digital i povezanih servisa. Naša misija je da obezbedimo transparentnost, sigurnost i zakonitu obradu podataka u skladu sa najboljim praksama i važećim zakonima Republike Srbije.",
+
+  "section1": {
+    "title": "1. Koje podatke prikupljamo",
+    "text": "Prikupljamo isključivo podatke koji su neophodni za kvalitetno korišćenje naših usluga. Podaci se unose dobrovoljno, a bezbednost i privatnost su nam prioritet."
+  },
+
+  "section2": {
+    "title": "2. Kako koristimo prikupljene podatke",
+    "text": "Podatke koristimo isključivo radi komunikacije sa vama, unapređenja usluga, isporuke traženih digitalnih rešenja i poboljšanja korisničkog iskustva."
+  },
+
+  "section3": {
+    "title": "3. Upotreba kolačića (cookies)",
+    "text": "Naša platforma koristi osnovne i funkcionalne kolačiće radi pravilnog prikazivanja sadržaja, analitike i poboljšanja performansi. Kolačiće možete kontrolisati ili deaktivirati u podešavanjima pregledača."
+  },
+
+  "section4": {
+    "title": "4. Prava korisnika",
+    "text": "U skladu sa Zakonom o zaštiti podataka o ličnosti imate pravo na uvid, ispravku, brisanje podataka, kao i pravo da povučete saglasnost ili podnesete prigovor u vezi obrade."
+  },
+
+  "section5": {
+    "title": "5. Čuvanje i zaštita podataka",
+    "text": "Vaši podaci se čuvaju na bezbedan način i ne prosleđuju trećim licima, osim u slučajevima kada je to neophodno za izvršavanje usluge (npr. email serveri, sistemi za analitiku) i uvek uz adekvatne mere zaštite."
+  },
+
+  "section6": {
+    "title": "6. Odgovornost i ograničenja",
+    "text": "ProfiSajt.digital i express-web zajednica primenjuju tehničke i organizacione mere za zaštitu podataka, ali ne mogu garantovati apsolutnu sigurnost u slučaju internet incidenata koji su van naše kontrole."
+  },
+
+  "contact": {
+    "title": "Kontakt za zaštitu podataka",
+    "text": "Ukoliko imate pitanja u vezi privatnosti ili želite da ostvarite neko od svojih prava, možete nas kontaktirati putem email adrese: info (at) profisajt.digital"
+  }
+},
+"projectsPage": {
+  "title": "Projekti",
+  "text": "Pogledajte našu punu listu projekata i primera rešenja koje smo razvili.",
+  "button": "Vidi sve projekte"
+},
+  "nav": {
+    "logoAria": "Početna strana ProfiSajt.Digital",
+    "pricing": "Cene",
+    "projects": "Projekti",
+    "blog": "Blog",
+    "contact": "Kontakt",
+    "docs": "Dokumentacija",
+    "customers": "Klijenti",
+    "support": "Podrška",
+    "apps": "Aplikacije",
+    "extra": "Više",
+    "login": "Prijava",
+    "register": "Registracija",
+    "language": "Jezik"
+  },
+  "about": {
+    "title": "O nama",
+    "paragraph1": "Express Web je mali, fokusiran tim koji razvija prilagođena web i e-commerce rešenja. Ne jurimo “brze pobede” — cilj nam je održiv softver, jasan proces i merljivi rezultati.",
+    "paragraph2": "Naša praksa uključuje moderni frontend (Vue/React), backend (Laravel/PHP), multivendor, međunarodizaciju (i18n), automatizovan deploy i SEO standarde. Verujemo u transparentnost: zato ne izmišljamo reference i ne “šminkamo” rezultate.",
+    "paragraph3": "Ako gradite proizvod ili želite da unapredite prodaju i procese — krenimo od malih, isporučivih celina, sa jasnim ciljevima i rokovima. Posle toga, iterativno skaliramo."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "company": "Radoje Božić pr Računarsko programiranje EXPRESS WEB",
+    "addressLabel": "Adresa",
+    "address": "Vitezova Karađorđeve Zvezde 50, 11050 Beograd (Palilula)",
+    "emailLabel": "Email",
+    "email": "office{'@'}express-web.express",
+    "phoneLabel": "Telefon",
+    "phone": "+381 61 217 90 13",
+    "aboutUs": "O nama",
+    "aboutText": "Razvijamo prilagođena web i e-commerce rešenja sa fokusom na efikasan razvoj, transparentan proces i merljive rezultate.",
+    "formTitle": "Pošaljite poruku",
+    "name": "Ime i prezime",
+    "yourEmail": "Vaš email",
+    "phoneOptional": "Telefon (opciono)",
+    "subjectOptional": "Naslov (opciono)",
+    "message": "Poruka",
+    "send": "Pošalji",
+    "success": "Poruka je uspešno poslata.",
+    "error": "Došlo je do greške. Pokušajte ponovo.",
+    "requiredError": "Molimo popunite obavezna polja.",
+    "invalidEmail": "Neispravan email.",
+    "consentLabel": "Saglasan/saglasna sam da moji podaci budu korišćeni isključivo za kontakt.",
+    "openInMap": "Otvori u mapi"
+  },
+
+  "projects": {
+    "title": "Projekti",
+    "liveProjects": "Naši aktivni projekti",
+    "templates": "Cruip šabloni (preview)",
+    "wpCoBuild": "Zajedničko kreiranje WP sajta (klijent + ChatGPT + Express Web)"
+  },
+  "pricing": {
+    "title": "Paketi koji odgovaraju vašim potrebama",
+    "subtitle": "Bez obzira na broj članova tima — cene su jednostavne, transparentne i prilagodljive vašoj firmi.",
+    "perMonth": "mesec",
+    "toggle": {
+      "yearly": "Godišnja naplata",
+      "monthly": "Mesečna naplata",
+      "discount": "-20%"
+    },
+    "cta": "Isprobaj besplatno",
+    "plans": {
+      "hobby": {
+        "name": "Hobi",
+        "desc": "Za hobi projekte, staging sajtove i side hustle.",
+        "features": ["2 strane", "Ograničen saobraćaj", "50 form submit-a", "1.000 poseta/mes."]
+      },
+      "basic": {
+        "name": "Osnovni",
+        "desc": "Za jednostavne, statične sajtove i landing stranice.",
+        "features": ["150 strana", "Prilagođen domen", "200 form submit-a", "10.000 poseta/mes."]
+      },
+      "business": {
+        "name": "Biznis",
+        "desc": "Za veće sajtove, blogove i data-driven sadržaj.",
+        "features": ["150 strana", "Prilagođen domen", "500 form submit-a", "50.000 poseta/mes."]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "desc": "Za kompanije kojima treba enterprise rešenje.",
+        "features": ["150 strana", "Prilagođen domen", "500 form submit-a", "50.000 poseta/mes."]
+      }
+    }
+  },
+  "compare": {
+    "cta": "Besplatna proba",
+    "plans": {
+      "hobby": "Hobi",
+      "basic": "Osnovni",
+      "business": "Biznis",
+      "enterprise": "Enterprise"
+    },
+    "sections": {
+      "key": "Ključne funkcije",
+      "hosting": "Hosting",
+      "features": "Funkcionalnosti",
+      "creation": "Kreiranje"
+    },
+    "labels": {
+      "translatedWords": "Prevedene reči",
+      "searchLimit": "Limit stranica za pretragu",
+      "customFonts": "Prilagođeni fontovi",
+      "codeEditor": "Kôd editor",
+      "bandwidth": "Protok (bandwidth)",
+      "visitors": "Posetioci",
+      "maxUpload": "Maks. veličina upload-a",
+      "ssl": "SSL sertifikat",
+      "createdWords": "Kreirane reči",
+      "teamProjects": "Timski projekti"
+    },
+    "values": {
+      "unlimited": "Neograničeno",
+      "custom": "Po meri"
+    },
+    "tooltips": {
+      "translatedWords": "Ukupan broj reči obrađen prevodilačkim funkcijama.",
+      "searchLimit": "Maksimalan broj stranica koje indeksiramo za analizu.",
+      "customFonts": "Otpremi i koristi sopstvene fontove.",
+      "codeEditor": "Ugrađen editor za prilagođeni kôd.",
+      "bandwidth": "Mesečni protok podataka.",
+      "visitors": "Procena jedinstvenih posetilaca mesečno.",
+      "maxUpload": "Maksimalna veličina jedne datoteke pri upload-u.",
+      "ssl": "Šifrovani saobraćaj putem SSL-a.",
+      "createdWords": "Reči generisane našim alatima.",
+      "teamProjects": "Kreiraj i upravljaj deljenim projektima u timu."
+    }
+  },
+  "faqs": {
+    "heading": "Najčešća pitanja",
+    "items": [
+      {
+        "question": "Po čemu se ProfiSajt.digital razlikuje od konkurencije?",
+        "answer": "ProfiSajt.digital je jednostavan i intuitivan, i ne razlikuje se mnogo od drugih popularnih kreatora sajtova. Međutim, njegova snaga leži u AI tehnologiji koja omogućava brzu izradu i prilagođavanje sajtova."
+      },
+      {
+        "question": "Mogu li da otkažem plan u bilo kom trenutku?",
+        "answer": "Da, ali plaćate ostatak perioda za plan na koji ste se prijavili.",
+        "active": true
+      },
+      {
+        "question": "Mogu li da otkažem plan radnog prostora u bilo kom trenutku?",
+        "answer": "Da, ali plaćate ostatak perioda za plan na koji ste se prijavili."
+      },
+      {
+        "question": "Kakvu podršku Simple pruža?",
+        "answer": "Podrška je dostupna 24/7 putem e-pošte, četa i telefona. Tu smo za sva pitanja i nedoumice."
+      },
+      {
+        "question": "Mogu li klijenti ili saradnici da otpreme svoj sadržaj?",
+        "answer": "Da! Možete pozvati klijente ili saradnike da rade na projektu i da sami otpremaju sadržaj."
+      },
+      {
+        "question": "Koliki saobraćaj hosting na Simple može da podnese?",
+        "answer": "Planovi hostinga su dizajnirani za veće obime saobraćaja, tako da će sajt dobro raditi i pod opterećenjem."
+      },
+      {
+        "question": "Da li su Simple sajtovi SEO-prijateljski?",
+        "answer": "Da! Simple je napravljen sa SEO u vidu, pa lako možete optimizovati sajt za pretraživače."
+      }
+    ]
+  },
+  "postSingle": {
+    "backToBlog": "Nazad na blog",
+    "title": "Kako preći na serverless hosting",
+    "author": "Aleksandra Mur",
+    "date": "22. jul 2027.",
+
+    "p1": "U stalno promenljivom svetu tehnologije, jedan od ključnih pomaka koji je privukao veliku pažnju je serverless pristup. Serverless arhitektura ne znači da nema servera, već da se upravljanje i održavanje servera prepušta cloud provajderu.",
+    "p2": "Ovaj pristup donosi skalabilnost, manji operativni trošak i efikasnost. U ovom tekstu prolazimo kroz korake migracije na serverless hosting i benefite koje donosi.",
+
+    "h2_serverless": "Šta je serverless hosting",
+    "p3": "Tradicionalno, hostovanje je podrazumevalo upravljanje serverima, rezervisanje resursa i ručno skaliranje opterećenja.",
+    "p4_html": "Cloud provajderi poput <a href=\"#0\">AWS Lambda</a>, <a href=\"#0\">Google Cloud</a> Functions i <a href=\"#0\">Microsoft Azure</a> Functions nude serverless platforme gde uploadujete kod, definišete trigere i ostatak obavlja platforma.",
+    "quote": "Uzbuđeni smo zbog partnerstva sa Vercel-om kako bismo najnovije open-source ML modele približili većem broju AI inženjera. Verujemo da AI treba da bude lako pokrenuti i integrisati u svaku web aplikaciju.",
+    "p5_html": "Serverless platforme su dizajnirane za visoku dostupnost i otpornost. Uz ugrađenu redundansu i automatski failover, aplikacije na <a href=\"#0\">serverless platformama</a> bolje podnose kvarove infrastrukture i obezbeđuju kontinuitet rada.",
+
+    "h2_benefits": "Prednosti serverless hostinga",
+    "benefit1_html": "<strong>Skalabilnost</strong>: resursi se automatski prilagođavaju potražnji. Bilo da imate skok poseta ili miran period, platforma dinamički dodeljuje resurse za optimalne performanse bez ručne intervencije.",
+    "benefit2_html": "<strong>Troškovna efikasnost</strong>: plaćate samo vreme izvršavanja, bez troškova za neiskorišćene servere. Pay-per-use model posebno prija aplikacijama sa promenljivim opterećenjem.",
+    "benefit3_html": "<strong>Manja operativna složenost</strong>: nadzor, patch-evi i bezbednost su na strani platforme, pa tim može fokus da prebaci na funkcionalnosti i UX.",
+
+    "h2_guide": "Vodič korak-po-korak",
+    "p6_html": "Procijenite arhitekturu i izdvojte delove pogodne za serverless. <strong>Funkcije koje rade samostalno</strong> i imaju jasne ulaze/izlaze idealni su kandidati.",
+    "p7": "Refaktorišite monolit na manje funkcije koje se samostalno deploy-uju i skaliraju.",
+
+    "h2_conclusion": "Zaključak",
+    "p8_html": "Migracija na serverless menja način kako razvijamo, deploy-ujemo i održavamo aplikacije. Iskorišćavanjem skalabilnosti, troškovne efikasnosti i jednostavnijeg održavanja, dobijate prostor za bržu inovaciju. Iako je potrebna dobra priprema, <a href=\"#0\">koristi serverless-a</a> obično nadmašuju inicijalni napor.",
+
+    "newsletter": {
+      "heading": "Primaj novosti direktno u inbox.",
+      "placeholder": "Tvoja e-pošta...",
+      "cta": "Prijavi se"
+    },
+
+    "toc": {
+      "title": "Sadržaj stranice",
+      "serverless": "O serverless hostingu",
+      "benefits": "Prednosti serverless-a",
+      "guide": "Korak-po-korak",
+      "conclusion": "Zaključak"
+    }
+  },
+  "blogList": {
+    "heading": "Simple blog",
+    "subheading": "Sadržaj za developere, product i digital stručnjake.",
+    "categories": {
+      "all": "Sve",
+      "interviews": "Intervjui",
+      "inspiration": "Inspiracija",
+      "updates": "Novosti",
+      "product": "Proizvod",
+      "misc": "Razno"
+    },
+    "excerpt": "U ovom tekstu delimo tehničke detalje kako smo napravili napredan sistem za praćenje formi i kako timovi u Simple-u rade sa metrikama kvaliteta podataka koje stoje iza našeg dizajn builder ekosistema.",
+    "readMore": "Pročitaj više",
+    "loadMore": "Učitaj još",
+    "articles": {
+      "a1": { "author": "Aleksandra Mur", "title": "Simple sistem za praćenje i validaciju web formi" },
+      "a2": { "author": "Mark Kruppet", "title": "Predstavljamo AI SDK 3.0 sa UI podrškom" },
+      "a3": { "author": "Aleksandra Mur", "title": "8 načina da poboljšaš usvajanje funkcija (sa strategijama)" },
+      "a4": { "author": "Mark Kruppet", "title": "Kako preći na serverless hosting" },
+      "a5": { "author": "Aleksandra Mur", "title": "Robusna platforma za dokumentaciju uz Simple" },
+      "a6": { "author": "Mark Kruppet", "title": "Kako Simple pomaže xWeb-u da upravlja sa 4K+ sajtova" },
+      "a7": { "author": "Aleksandra Mur", "title": "Optimizacija performansi za 6M+ mesečnih poseta" },
+      "a8": { "author": "Mark Kruppet", "title": "Revolucija video editovanja na webu sa Simple-om" }
+    }
+  },
+  "supportHero": {
+    "title": "Kako možemo da pomognemo?",
+    "subtitle": "Treba Vam podrška ili imate pitanje o ProfiSajt Digital-u? Tu smo da pomognemo.",
+    "searchButton": {
+      "label": "Pretraga",
+      "placeholder": " pomoć (npr. kreiranje sajta, članovi i sl.)",
+      "aria": "Otvori pretragu pomoći"
+    }
+  },
+  "faqs02": {
+    "sections": {
+      "gettingStarted": {
+        "title": "Prvi koraci",
+        "items": {
+          "1": {
+            "question": "Kako da počnem sa Simple-om",
+            "answer": "Simple je osmišljen da bude jednostavan i intuitivan, dok je Complex robusniji i bogatiji funkcijama. Oba alata su odlična za izradu sajtova, ali je Simple idealan za početnike i mala preduzeća, dok Complex više odgovara većim organizacijama i developerima."
+          },
+          "2": {
+            "question": "Promotivni i probni planovi",
+            "answer": "Da, ali ćete i dalje platiti ostatak perioda za plan na koji ste se prijavili."
+          },
+          "3": {
+            "question": "Ne mogu da verifikujem nalog",
+            "answer": "Da, ali ćete i dalje platiti ostatak perioda za plan na koji ste se prijavili."
+          },
+          "4": {
+            "question": "Obaveštenje o uklanjanju sadržaja (DMCA)",
+            "answer": "Podrška je dostupna 24/7 putem e-pošte, četa i telefona. Tu smo za sva vaša pitanja i nedoumice."
+          },
+          "5": {
+            "question": "Kako da prijavim nepoznatu naplatu",
+            "answer": "Da! Možete pozvati klijente ili kolege da rade zajedno na projektima i oni mogu otpremati sopstveni sadržaj."
+          }
+        }
+      },
+      "profilePlans": {
+        "title": "Profil i paketi",
+        "items": {
+          "1": {
+            "question": "Izmena u okviru plaćenog paketa",
+            "answer": "Simple je osmišljen da bude jednostavan i intuitivan, dok je Complex robusniji i bogatiji funkcijama. Oba alata su odlična za izradu sajtova, ali je Simple idealan za početnike i mala preduzeća, dok Complex više odgovara većim organizacijama i developerima."
+          },
+          "2": {
+            "question": "Otkaži pretplatu",
+            "answer": "Da, ali ćete i dalje platiti ostatak perioda za plan na koji ste se prijavili."
+          },
+          "3": {
+            "question": "Ne mogu da izmenim profil",
+            "answer": "Da, ali ćete i dalje platiti ostatak perioda za plan na koji ste se prijavili."
+          },
+          "4": {
+            "question": "Kako da obrišem nalog",
+            "answer": "Podrška je dostupna 24/7 putem e-pošte, četa i telefona. Tu smo za sva vaša pitanja i nedoumice."
+          },
+          "5": {
+            "question": "Kako da kontaktiram korisničku podršku",
+            "answer": "Da! Možete pozvati klijente ili kolege da rade zajedno na projektima i oni mogu otpremati sopstveni sadržaj."
+          }
+        }
+      },
+      "accounts": {
+        "title": "Nalozi",
+        "items": {
+          "1": {
+            "question": "Kako da promenim lozinku",
+            "answer": "Simple je osmišljen da bude jednostavan i intuitivan, dok je Complex robusniji i bogatiji funkcijama. Oba alata su odlična za izradu sajtova, ali je Simple idealan za početnike i mala preduzeća, dok Complex više odgovara većim organizacijama i developerima."
+          },
+          "2": {
+            "question": "Kako da promenim e-mail adresu",
+            "answer": "Da, ali ćete i dalje platiti ostatak perioda za plan na koji ste se prijavili."
+          },
+          "3": {
+            "question": "Kako da promenim korisničko ime",
+            "answer": "Da, ali ćete i dalje platiti ostatak perioda za plan na koji ste se prijavili."
+          },
+          "4": {
+            "question": "Kako da promenim podatke za naplatu",
+            "answer": "Podrška je dostupna 24/7 putem e-pošte, četa i telefona. Tu smo za sva vaša pitanja i nedoumice."
+          },
+          "5": {
+            "question": "Kako da promenim obaveštenja",
+            "answer": "Da! Možete pozvati klijente ili kolege da rade zajedno na projektima i oni mogu otpremati sopstveni sadržaj."
+          }
+        }
+      }
+    }
+  },
+ "heroApps": {
+  "title": "Programski jezici, frejmvorci i platforme",
+  "subtitle": "Naš razvojni ekosistem zasniva se na modernim tehnologijama koje obezbeđuju stabilnost, brzinu i fleksibilnost svakog projekta."
+},
+   "appList": {
+    "title": "Naš tehnološki okvir",
+    "subtitle": "Jezici, biblioteke i platforme koje koristimo na projektima.",
+    "sections": {
+      "languages": "Jezici i okruženja",
+      "frameworks": "Frejmvorci i biblioteke",
+      "platforms": "CMS / Šabloni / Platforme"
+    },
+    "items": {
+      "languages": {
+        "js_ts": {
+          "name": "JavaScript / TypeScript",
+          "description": "Primarni jezici za frontend; strože tipiziranje TypeScript-om gde donosi vrednost."
+        },
+        "php": {
+          "name": "PHP",
+          "description": "Bekend/runtime za određene integracije i e-commerce (Bagisto / Laravel ekosistem)."
+        },
+        "node": {
+          "name": "Node.js",
+          "description": "Alati i build pipeline (Vite), dev server i SSR kada je potrebno."
+        },
+        "python": {
+          "name": "Python",
+          "description": "Skripting, utiliti alati i rad sa podacima za specifične zadatke."
+        }
+      },
+      "frameworks": {
+        "vue3": {
+          "name": "Vue 3",
+          "description": "Glavni UI framework sa Composition API-jem i SFC komponentama."
+        },
+        "vite": {
+          "name": "Vite",
+          "description": "Dev server i veoma brzi build-ovi: ES moduli, code-splitting, HMR."
+        },
+        "tailwind": {
+          "name": "Tailwind CSS",
+          "description": "Utility-first stilizacija sa dizajn tokenima i responsivnim varijantama."
+        },
+        "vueRouter": {
+          "name": "Vue Router",
+          "description": "Klijentsko rutiranje sa ugnježdenim rutama i kontrolom skrolovanja."
+        },
+        "pinia": {
+          "name": "Pinia",
+          "description": "Menadžment stanja: modularne prodavnice, devtools, prijateljski za tipizaciju."
+        },
+        "vueI18n": {
+          "name": "Vue I18n",
+          "description": "Internacionalizacija: poruke, menjanje jezika, lazy-loading."
+        },
+        "http": {
+          "name": "Axios / Fetch",
+          "description": "HTTP klijent i native Fetch za komunikaciju sa API-jem."
+        }
+      },
+      "platforms": {
+        "bagisto": {
+          "name": "Bagisto (Webkul)",
+          "description": "Laravel e-commerce: katalog, checkout, multi-vendor i marketplace moduli."
+        },
+        "cruip": {
+          "name": "Cruip šabloni",
+          "description": "Moderni UI šabloni za brzu isporuku marketing i landing stranica."
+        },
+        "cloudways": {
+          "name": "Cloudways",
+          "description": "Managed cloud hosting (Debian stack), Git deploy, bekapi i monitoring."
+        },
+        "namecheap": {
+          "name": "Namecheap",
+          "description": "Registar domena i hosting partner — SSL sertifikati, DNS i reseller integracije."
+        },
+        "stripe": {
+          "name": "Stripe",
+          "description": "Plaćanja, pretplate, fakturisanje i isplate za marketplace uz Stripe Connect."
+        },
+        "gha": {
+          "name": "GitHub Actions",
+          "description": "CI/CD cevovodi za automatski build, test i deploy."
+        }
+      }
+    }
+  },
+  "common": {
+    "viewAll": "Prikaži sve",
+    "loadMore": "Učitaj još",
+    "featured": "Izdvojeno"
+  },
+  "auth": {
+    "signup": {
+      "title": "Kreiraj svoj nalog",
+      "fullName": "Ime i prezime",
+      "email": "Email",
+      "phone": "Telefon",
+      "password": "Lozinka",
+      "placeholders": {
+        "fullName": "Petar Petrović",
+        "email": "vi{'@'}profisajt.digital",
+        "phone": "(+381) 60 000 0000",
+        "password": "********"
+      },
+      "registerButton": "Registruj se",
+      "googleButton": "Nastavi sa Google-om",
+      "loading": "Kreiramo tvoj nalog...",
+      "or": "Ili",
+      "terms": {
+        "prefix": "Registracijom prihvatate",
+        "tos": "Uslove korišćenja",
+        "privacy": "Politiku privatnosti",
+        "and": "i"
+      },
+      "messages": {
+        "success": "Nalog je uspešno kreiran.",
+        "error": "Došlo je do greške pri registraciji. Pokušajte ponovo."
+      }
+    },
+    "signin": {
+      "title": "Prijavite se na svoj nalog",
+      "email": "Email",
+      "password": "Lozinka",
+      "button": "Prijavi se",
+      "loading": "Prijavljujemo vas...",
+      "forgot": "Zaboravljena lozinka?",
+      "placeholders": {
+        "email": "vi{'@'}profisajt.digital",
+        "password": "********"
+      },
+      "messages": {
+        "success": "Uspešno ste prijavljeni.",
+        "error": "Neispravni podaci. Pokušajte ponovo."
+      }
+    },
+    "reset": {
+      "title": "Reset lozinke",
+      "subtitle": "Unesite email adresu povezanu sa vašim nalogom i poslaćemo vam link za resetovanje lozinke.",
+      "email": "Email",
+      "button": "Pošalji link za reset lozinke",
+      "loading": "Šaljemo link...",
+      "backToLogin": "Nazad na prijavu",
+      "placeholders": {
+        "email": "vi{'@'}profisajt.digital"
+      },
+      "messages": {
+        "success": "Ako nalog sa tom email adresom postoji, poslali smo vam link za reset lozinke.",
+        "error": "Došlo je do problema prilikom slanja linka. Pokušajte ponovo."
+      }
+    }
   }
 }

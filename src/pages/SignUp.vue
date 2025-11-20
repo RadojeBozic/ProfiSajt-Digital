@@ -1,3 +1,38 @@
+<script setup>
+import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
+const form = ref({
+  name: '',
+  email: '',
+  phone: '',
+  password: '',
+})
+
+const loading = ref(false)
+const errorMessage = ref('')
+const successMessage = ref('')
+
+// ovo ćemo iskoristiti kasnije za backend
+const onSubmit = async () => {
+  loading.value = true
+  errorMessage.value = ''
+  successMessage.value = ''
+
+  try {
+    // TODO: ovde ide poziv ka backendu (axios/fetch)
+    console.log('Form data:', form.value)
+    successMessage.value = t('auth.signup.messages.success')
+  } catch (error) {
+    errorMessage.value = t('auth.signup.messages.error')
+  } finally {
+    loading.value = false
+  }
+}
+</script>
+
 <template>
   <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
 
@@ -9,15 +44,8 @@
           <!-- Site branding -->
           <div class="shrink-0 mr-4">
             <!-- Logo -->
-            <router-link class="inline-flex" to="/" aria-label="Cruip">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28">
-                <path class="fill-blue-500" fill-rule="evenodd"
-                  d="M15.052 0c6.914.513 12.434 6.033 12.947 12.947h-5.015a7.932 7.932 0 0 1-7.932-7.932V0Zm-2.105 22.985V28C6.033 27.487.513 21.967 0 15.053h5.015a7.932 7.932 0 0 1 7.932 7.932Z"
-                  clip-rule="evenodd" />
-                <path class="fill-blue-300" fill-rule="evenodd"
-                  d="M0 12.947C.513 6.033 6.033.513 12.947 0v5.015a7.932 7.932 0 0 1-7.932 7.932H0Zm22.984 2.106h5.015C27.486 21.967 21.966 27.487 15.052 28v-5.015a7.932 7.932 0 0 1 7.932-7.932Z"
-                  clip-rule="evenodd" />
-              </svg>
+            <router-link class="inline-flex" to="/" :aria-label="t('footer.logoAria')">
+              <img src="../images/profi_logo.png" alt="ProfiSajt.digital logo" class="h-16 w-auto" />
             </router-link>
           </div>
 
@@ -42,49 +70,120 @@
               <div class="py-16 md:py-20">
 
                 <div class="mb-10">
-                  <h1 class="text-4xl font-bold">Create your account</h1>
+                  <h1 class="text-4xl font-bold">{{ t('auth.signup.title') }}</h1>
                 </div>
 
                 <!-- Form -->
-                <form>
-                  <div class="space-y-4">
-                    <div>
-                      <label class="block text-sm text-gray-700 font-medium mb-1" for="name">Full name</label>
-                      <input id="name" class="form-input py-2 w-full" type="text" placeholder="Corey Barker" required />
-                    </div>
-                    <div>
-                      <label class="block text-sm text-gray-700 font-medium mb-1" for="email">Email</label>
-                      <input id="email" class="form-input py-2 w-full" type="email" placeholder="corybarker@email.com"
-                        required />
-                    </div>
-                    <div>
-                      <label class="block text-sm text-gray-700 font-medium mb-1" for="phone">Phone</label>
-                      <input id="phone" class="form-input py-2 w-full" type="text" placeholder="(+750) 932-8907"
-                        required />
-                    </div>
-                    <div>
-                      <label class="block text-sm text-gray-700 font-medium mb-1" for="password">Password</label>
-                      <input id="password" class="form-input py-2 w-full" type="password" autocomplete="on"
-                        placeholder="••••••••" required />
-                    </div>
+                <form @submit.prevent="onSubmit">
+                <div class="space-y-4">
+                  <div>
+                    <label class="block text-sm text-gray-700 font-medium mb-1" for="name">
+                      {{ t('auth.signup.fullName') }}
+                    </label>
+                    <input
+                      id="name"
+                      v-model="form.name"
+                      class="form-input py-2 w-full"
+                      type="text"
+                      :placeholder="t('auth.signup.placeholders.fullName')"
+                      required
+                    />
                   </div>
-                  <div class="space-y-3 mt-6">
-                    <button
-                      class="btn text-white bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] hover:bg-[length:100%_150%] bg-[bottom] shadow w-full">Register</button>
-                    <div class="italic text-sm text-gray-400 text-center">Or</div>
-                    <button
-                      class="btn text-white bg-gradient-to-t from-gray-900 to-gray-700 bg-[length:100%_100%] hover:bg-[length:100%_150%] bg-[bottom] shadow w-full">Continue
-                      with GitHub</button>
+
+                  <div>
+                    <label class="block text-sm text-gray-700 font-medium mb-1" for="email">
+                      {{ t('auth.signup.email') }}
+                    </label>
+                    <input
+                      id="email"
+                      v-model="form.email"
+                      class="form-input py-2 w-full"
+                      type="email"
+                      :placeholder="t('auth.signup.placeholders.email')"
+                      required
+                    />
                   </div>
-                </form>
+
+                  <div>
+                    <label class="block text-sm text-gray-700 font-medium mb-1" for="phone">
+                      {{ t('auth.signup.phone') }}
+                    </label>
+                    <input
+                      id="phone"
+                      v-model="form.phone"
+                      class="form-input py-2 w-full"
+                      type="text"
+                      :placeholder="t('auth.signup.placeholders.phone')"
+                    />
+                  </div>
+
+                  <div>
+                    <label class="block text-sm text-gray-700 font-medium mb-1" for="password">
+                      {{ t('auth.signup.password') }}
+                    </label>
+                    <input
+                      id="password"
+                      v-model="form.password"
+                      class="form-input py-2 w-full"
+                      type="password"
+                      autocomplete="on"
+                      :placeholder="t('auth.signup.placeholders.password')"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="space-y-3 mt-6">
+                  <button
+                    type="submit"
+                    class="btn text-white bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] hover:bg-[length:100%_150%] bg-[bottom] shadow w-full"
+                    :disabled="loading"
+                  >
+                    <span v-if="!loading">{{ t('auth.signup.registerButton') }}</span>
+                    <span v-else>{{ t('auth.signup.loading') }}</span>
+                  </button>
+
+                  <div class="italic text-sm text-gray-400 text-center">
+                    {{ t('auth.signup.or') }}
+                  </div>
+
+                  <button
+                    type="button"
+                    class="btn text-white bg-gradient-to-t from-gray-900 to-gray-700 bg-[length:100%_100%] hover:bg-[length:100%_150%] bg-[bottom] shadow w-full"
+                  >
+                    {{ t('auth.signup.googleButton') }}
+                  </button>
+                </div>
+
+                <div class="mt-4 space-y-1" v-if="errorMessage">
+                  <p class="text-sm text-red-500 text-center">{{ errorMessage }}</p>
+                </div>
+                <div class="mt-4 space-y-1" v-if="successMessage">
+                  <p class="text-sm text-green-500 text-center">{{ successMessage }}</p>
+                </div>
+              </form>
+
 
                 <!-- Bottom link -->
                 <div class="text-center mt-6">
-                  <p class="text-sm text-gray-500">By signing up, you agree to the <a
-                      class="font-medium text-gray-700 underline hover:no-underline whitespace-nowrap" href="#0">Terms
-                      of Service</a> and <a
-                      class="font-medium text-gray-700 underline hover:no-underline whitespace-nowrap" href="#0">Privacy
-                      Policy</a>.</p>
+                  <p class="text-sm text-gray-500">
+                    {{ t('auth.signup.terms.prefix') }}
+                    <router-link
+                      class="font-medium text-gray-700 underline hover:no-underline whitespace-nowrap"
+                      to="/terms"
+                    >
+                      {{ t('auth.signup.terms.tos') }}
+                    </router-link>
+
+                    {{ t('auth.signup.terms.and') }}
+
+                    <router-link
+                      class="font-medium text-gray-700 underline hover:no-underline whitespace-nowrap"
+                      to="/privacy"
+                    >
+                      {{ t('auth.signup.terms.privacy') }}
+                    </router-link>.
+                  </p>
                 </div>
 
               </div>
@@ -108,7 +207,7 @@
           <div class="w-full aspect-video bg-gray-900 rounded-2xl px-5 py-3 shadow-xl transition duration-300">
             <div
               class="relative flex items-center justify-between before:block before:w-[41px] before:h-[9px] before:[background-image:radial-gradient(circle_at_4.5px_4.5px,var(--color-gray-600)_4.5px,_transparent_0)] before:bg-[length:16px_9px] after:w-[41px] mb-8">
-              <span class="text-white font-medium text-[13px]">cruip.com</span>
+              <span class="text-white font-medium text-[13px]">profisajt.digital</span>
             </div>
             <div class="text-gray-500 font-mono [&amp;_span]:opacity-0 text-sm transition duration-300">
               <span class="text-gray-200 animate-[code-1_10s_infinite]">npm login</span> <span

@@ -1,24 +1,143 @@
+<script setup>
+import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+import Particles from './Particles.vue'
+
+// TODO: prilagodi putanje i imena fajlova slikama tvojih klijenata
+import TestimonialImg01 from '../images/testimonial-01.jpg'
+import TestimonialImg02 from '../images/testimonial-02.jpg'
+import TestimonialImg03 from '../images/testimonial-03.jpg'
+
+const { t } = useI18n()
+
+const active = ref(0)
+const autorotate = ref(true)
+const autorotateTiming = 7000
+const autorotateInterval = ref(null)
+
+// Items se računaju kroz computed da bi se automatski osvežili kad promeniš jezik
+const items = computed(() => [
+  {
+    img: TestimonialImg01,
+    quote: t('testimonials.items[0].quote'),
+    name: t('testimonials.items[0].name'),
+    role: t('testimonials.items[0].role'),
+  },
+  {
+    img: TestimonialImg02,
+    quote: t('testimonials.items[1].quote'),
+    name: t('testimonials.items[1].name'),
+    role: t('testimonials.items[1].role'),
+  },
+  {
+    img: TestimonialImg03,
+    quote: t('testimonials.items[2].quote'),
+    name: t('testimonials.items[2].name'),
+    role: t('testimonials.items[2].role'),
+  },
+])
+
+const stopAutorotate = () => {
+  if (autorotateInterval.value) {
+    clearInterval(autorotateInterval.value)
+    autorotateInterval.value = null
+  }
+}
+
+onMounted(() => {
+  if (autorotate.value) {
+    autorotateInterval.value = setInterval(() => {
+      const total = items.value.length
+      active.value = active.value + 1 === total ? 0 : active.value + 1
+    }, autorotateTiming)
+  }
+})
+
+onBeforeUnmount(() => {
+  stopAutorotate()
+})
+</script>
+
 <template>
   <section>
-    <div class="max-w-2xl mx-auto px-4 sm:px-6">
-      <div class="py-12 md:py-20">
-        <div class="text-center space-y-3">
-          <div class="relative inline-flex">
-            <svg class="absolute -left-6 -top-2 -z-10" width="40" height="49" viewBox="0 0 40 49" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M22.7976 -0.000136375L39.9352 23.4746L33.4178 31.7234L13.7686 11.4275L22.7976 -0.000136375ZM9.34947 17.0206L26.4871 40.4953L19.9697 48.7441L0.320491 28.4482L9.34947 17.0206Z"
-                fill="#D1D5DB" />
-            </svg>
-            <img class="rounded-full" src="../images/large-testimonial.jpg" width="48" height="48"
-              alt="Large testimonial" />
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 py-12 md:py-20">
+      <div class="relative pb-12 md:pb-20">
+        <!-- Particles animation -->
+        <div
+          class="absolute left-1/2 -translate-x-1/2 top-0 -z-10 w-80 h-80 -mt-24"
+        >
+          <Particles class="absolute inset-0 -z-10" :quantity="10" :staticity="30" />
+        </div>
+
+        <!-- Carousel -->
+        <div class="text-center">
+          <!-- Testimonial image -->
+          <div
+            class="relative h-32 [mask-image:linear-gradient(0deg,transparent,var(--color-white)_40%,var(--color-white))]"
+          >
+            <transition-group
+              tag="div"
+              class="absolute top-0 left-1/2 -translate-x-1/2 w-[480px] h-[480px] -z-10 pointer-events-none before:rounded-full rounded-full before:absolute before:inset-0 before:bg-linear-to-b before:from-slate-400/20 before:to-transparent before:to-20% after:rounded-full after:absolute after:inset-0 after:bg-slate-900 after:m-px before:-z-20 after:-z-20"
+              enter-active-class="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700 order-first"
+              enter-from-class="opacity-0 -rotate-[60deg]"
+              enter-to-class="opacity-100 rotate-0"
+              leave-active-class="transition ease-[cubic-bezier(0.68,-0.3,0.32,1)] duration-700"
+              leave-from-class="opacity-100 rotate-0"
+              leave-to-class="opacity-0 rotate-[60deg]"
+            >
+              <template v-for="(item, index) in items" :key="index">
+                <div v-show="active === index" class="absolute inset-0 h-full -z-10">
+                  <img
+                    class="relative top-11 left-1/2 -translate-x-1/2 rounded-full"
+                    :src="item.img"
+                    width="56"
+                    height="56"
+                    :alt="item.name"
+                  />
+                </div>
+              </template>
+            </transition-group>
           </div>
-          <p class="text-2xl font-bold text-gray-900">“Simple has simplified my life in more ways than one. From
-            managing my sites to <em class="italic text-gray-500">keeping track of tasks</em>, it's become my go-to tool
-            for everything.”</p>
-          <div class="font-medium text-gray-500 text-sm">
-            <span class="text-gray-700">Mary Sullivan</span> <span class="text-gray-400">/</span> <a
-              class="text-blue-500" href="#0">CTO at Microsoft</a>
+
+          <!-- Text -->
+          <div class="mb-10">
+            <transition-group
+              tag="div"
+              class="relative flex flex-col"
+              enter-active-class="transition ease-in-out duration-500 delay-200 order-first"
+              enter-from-class="opacity-0 -translate-x-4"
+              enter-to-class="opacity-100 translate-x-0"
+              leave-active-class="transition ease-out duration-300 delay-300 absolute"
+              leave-from-class="opacity-100 translate-x-0"
+              leave-to-class="opacity-0 translate-x-4"
+            >
+              <template v-for="(item, index) in items" :key="index">
+                <div v-show="active === index">
+                  <div
+                    class="text-lg text-black"
+                  >
+                    {{ item.quote }}
+                  </div>
+                </div>
+              </template>
+            </transition-group>
+          </div>
+
+          <!-- Buttons (ime + uloga) -->
+          <div class="flex flex-wrap justify-center -m-1.5">
+            <button
+              v-for="(item, index) in items"
+              :key="index"
+              class="btn-sm m-1.5 text-xs py-1.5 text-slate-300 transition duration-150 ease-in-out [background:linear-gradient(var(--color-slate-900),var(--color-slate-900))_padding-box,conic-gradient(var(--color-slate-400),var(--color-slate-700)_25%,var(--color-slate-700)_75%,var(--color-slate-400)_100%)_border-box] relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none"
+              :class="active === index ? 'opacity-100' : 'opacity-30 hover:opacity-60'"
+              @click="active = index; stopAutorotate();"
+            >
+              <span class="relative">
+                <span class="text-slate-50">{{ item.name }}</span>
+                <span class="text-slate-600"> - </span>
+                <span>{{ item.role }}</span>
+              </span>
+            </button>
           </div>
         </div>
       </div>

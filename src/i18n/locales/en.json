@@ -1,16 +1,888 @@
 {
   "brand": "ProfiSajt.digital",
   "hero": {
-    "badge_alt_01": "Avatar 01",
-    "badge_alt_02": "Avatar 02",
-    "badge_alt_03": "Avatar 03",
-    "badge_alt_04": "Avatar 04",
-    "badge_alt_05": "Avatar 05",
-    "badge_alt_06": "Avatar 06",
-    "title_line1": "The website builder you're",
-    "title_line2": "looking for",
-    "subtitle": "Simple is a modern website builder powered by AI that changes how companies create user interfaces together.",
-    "cta_primary": "Start Free Trial",
-    "cta_secondary": "Learn More"
+  "badge_alt_01": "Small business owner",
+  "badge_alt_02": "Entrepreneur",
+  "badge_alt_03": "Freelance designer",
+  "badge_alt_04": "Online store owner",
+  "badge_alt_05": "Marketing team",
+  "badge_alt_06": "Startup team",
+
+  "badge_text": "Entrepreneurs, small businesses, freelancers and teams who want to go online the right way.",
+
+  "micro_promise": "Get a functional, promotion-ready website in  10 to 30 days.",
+
+  "title_line1": "Build your website and online store",
+  "title_line2": "and run campaigns with a mentor and AI",
+
+  "subtitle": "ProfiSajt.digital is a learning and support platform for building websites, online stores and marketing campaigns. We combine education, ready-made templates, AI assistants and hands-on guidance so your project goes online faster, safer and ready for promotion.",
+
+  "cta_primary": "Start with a free consultation",
+  "cta_secondary": "See what we offer",
+  "code_title": "profisajt.digital",
+  "code_line1": "profisajt init my-website",
+  "code_line2": "✔ Selected site type: WordPress / Custom",
+  "code_line3": "✔ Online store added",
+  "code_line4": "✔ Analytics and basic security connected",
+  "code_line5": "profisajt deploy",
+  "code_line6": "✔ Your website is live. Next step: marketing campaign."
+},
+"business": {
+  "tabs": {
+    "startups": "Small businesses & startups",
+    "webapps": "Websites & blogs",
+    "ecommerce": "Online stores & e-commerce",
+    "enterprise": "Advanced systems & companies"
+  },
+    "content": {
+    "startups_title": "For small businesses and startups",
+    "startups_body": "If you’re just starting, we help you go from idea to your first website and first campaign. Simple templates, clear structure, support with text and visuals – without unnecessary complexity.",
+
+    "webapps_title": "Websites, blogs and portals",
+    "webapps_body": "Whether you need a presentation website, a blog or a smaller portal, we guide you through choosing the right platform (WordPress, Webflow, custom) and help you prepare everything for SEO and promotion.",
+
+    "ecommerce_title": "Online stores and e-commerce systems",
+    "ecommerce_body": "From simple shops to more advanced e-commerce setups – we help you pick the right stack, organize products, configure payments and prepare campaigns that actually bring sales.",
+
+    "enterprise_title": "More complex systems and companies",
+    "enterprise_body": "For companies that need more than a classic website – custom applications, integrations with existing systems, multivendor platforms and specific business workflows, with consulting and long-term planning."
   }
+},
+"testimonials": {
+  "items": [
+    {
+      "quote": "At the beginning I was sceptical about this platform, but results came quickly. The system changed the way I run my business.",
+      "name": "Miroslav Božić",
+      "role": "Founder of Agro-BiM"
+    },
+    {
+      "quote": "This system helped me organize my time and resources much better. Now I can focus on what really matters. ProfiSajt agency is professional and efficient.",
+      "name": "Bojana Popić",
+      "role": "Founder of Agro-BiM"
+    },
+    {
+      "quote": "ProfiSajt agency transformed our online presence. Their team is extremely professional and dedicated. All our requirements were delivered on time and with high quality.",
+      "name": "Zoran Stojanović",
+      "role": "Metox LLC"
+    }
+  ]
+},
+  "featuresPlanet": {
+  "heading": "Strategic partners for sustainable online growth",
+  "subheading": "We don’t pretend to do everything alone. We rely on trusted global platforms for hosting, AI, design, domains and advertising – and help you use them for your business.",
+  "planetAlt": "Partner ecosystem around the ProfiSajt.digital platform",
+  "planetDecorAlt": "Decorative overlay symbolizing networking and growth",
+  "tags": {
+    "cloudways": "Cloudways – managed cloud hosting",
+    "canva": "Canva – visual identity and design",
+    "google": "Google – search, analytics and ads",
+    "meta": "Meta – Facebook and Instagram advertising",
+    "namecheap": "Namecheap – domain registration and DNS"
+  },
+  "cards": {
+    "ai": {
+      "title": "Artificial intelligence (AI assistants)",
+      "desc": "Using AI tools for content writing, campaign analysis, idea generation and support when building websites and online stores."
+    },
+    "cloud": {
+      "title": "Cloud hosting (Cloudways)",
+      "desc": "Fast and secure servers for your websites and apps, focused on performance, security and scaling when your business grows."
+    },
+    "design": {
+      "title": "Design & visuals (Canva)",
+      "desc": "Creating banners, social posts, presentations and visual assets that follow your website and campaigns – without expensive tools."
+    },
+    "domains": {
+      "title": "Domains & DNS (Namecheap)",
+      "desc": "Reliable domain registration, SSL certificates and DNS setup – everything you need for a visible and secure brand online."
+    },
+    "google": {
+      "title": "Google tools: search, analytics & Ads",
+      "desc": "Setting up Google Analytics, Search Console and Google Ads so you clearly see what works and what should be improved."
+    },
+    "metaAds": {
+      "title": "Meta ads: Facebook & Instagram",
+      "desc": "Planning and managing campaigns on the Meta network – from first tests to long-term performance marketing strategy."
+    }
+  }
+},
+  "testimonial": {
+    "alt": "Large testimonial",
+    "quote_part1": "ProfiSajt.digital has simplified my life in more ways than one. From managing my sites to",
+    "quote_highlight": "keeping track of tasks",
+    "quote_part2": "it's become my go-to tool for everything.",
+    "author": "Mary Sullivan",
+    "position": "CTO at Microsoft"
+  },
+  "featuresHome": {
+  "heading": "What your website gets under the hood",
+  "sub": "We don’t just make a nice-looking layout. From day one you get a solid structure, great readability on all devices, basic SEO setup, analytics and security essentials – so you can start your campaigns right away.",
+  "windowTitle": "profisajt.digital · setup",
+  "overlay01Alt": "Overview of basic website and structure settings",
+  "overlay02Alt": "Content, blog and page configuration",
+  "overlay03Alt": "Performance, analytics and key metrics overview",
+  "cards": {
+    "opt": {
+      "title": "User experience (UX) and structure",
+      "desc": "Clear navigation, logical section layout, visible calls-to-action and goal-oriented content – so visitors quickly understand what you offer and what the next step is."
+    },
+    "cookie": {
+      "title": "Privacy, cookies and security basics",
+      "desc": "Preparing a cookie banner, Privacy Policy page and basic security settings – to move closer to compliance and better protect your users’ data."
+    },
+    "domain": {
+      "title": "Domain, SSL and technical setup",
+      "desc": "Connecting a custom domain, enabling SSL, basic redirects and technical tuning – so your site is stable and easier for search engines to understand."
+    }
+  },
+  "cli": {
+    "line1": "profisajt new my-website",
+    "line2": "✔ Type: presentation site + blog",
+    "line3": "✔ Mobile–friendly layout",
+    "line4": "✔ Basic SEO and analytics configured",
+    "line5": "profisajt deploy",
+    "line6": "✔ Site connected to domain and SSL certificate"
+  }
+},
+  "testimonialsCarousel": {
+  "heading": "The four pillars of our work",
+  "subheading": "Everything we build is based on reliable technologies, an expert team, modern digital marketing and strong online security.",
+
+  "items": [
+    {
+      "name": "Reliable technologies and platforms",
+      "username": "@technology",
+      "date": "Pillar 1",
+      "content": "We work with proven stacks like Laravel, Vue, WordPress and specialized e-commerce solutions. The goal is for your website or app to be stable, fast and ready to grow.",
+      "channel": "Technology"
+    },
+    {
+      "name": "Expert team and mentoring",
+      "username": "@team",
+      "date": "Pillar 2",
+      "content": "We don’t just build websites – we share knowledge. Through education, consulting and support we help entrepreneurs and small teams understand their digital presence and make better decisions.",
+      "channel": "Team & mentoring"
+    },
+    {
+      "name": "Digital marketing and growth",
+      "username": "@marketing",
+      "date": "Pillar 3",
+      "content": "From day one we think about campaigns, content, positioning and ads. The website is not the final goal – the goal is more leads, more customers and measurable results.",
+      "channel": "Marketing"
+    },
+    {
+      "name": "Security and trust",
+      "username": "@security",
+      "date": "Pillar 4",
+      "content": "We take care of security: SSL, backups, account protection, updates and best practices. Your users should feel safe – and you should be able to sleep peacefully.",
+      "channel": "Security"
+    }
+  ]
+},
+  "cta": {
+    "heading": "Create your next project with ProfiSajt.digital",
+    "primary": "Start Free Trial",
+    "stripesAlt": "Stripes",
+    "subtext": "See how we've built digital solutions for our clients. Explore our processes, technologies, and style."
+  },
+  "footer": {
+  "brand": "ProfiSajt.digital",
+  "logoAria": "Home - ProfiSajt.digital",
+  "copyright": "All rights reserved.",
+  "sections": {
+    "services": {
+      "title": "Services",
+      "links": [
+        "Website Development",
+        "Online Stores",
+        "Marketplace Solutions",
+        "AI Assistants & Automation",
+        "Digital Marketing"
+      ]
+    },
+    "company": {
+      "title": "Company",
+      "links": [
+        "About Us",
+        "Projects",
+        "Blog",
+        "Careers"
+      ]
+    },
+    "legal": {
+      "title": "Legal",
+      "links": [
+        "Terms of Service",
+        "Privacy Policy",
+        "Cookie Policy"
+      ]
+    },
+    "social": {
+      "title": "Social Media",
+      "linkedin": "LinkedIn",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "github": "GitHub"
+    }
+  },
+  "bigText": {
+    "line1": "Profi Sajt",
+    "line2": "Sajt"
+  }
+},
+"about_footer": {
+  "badge": "About us",
+  "heading": "ProfiSajt.digital is more than “just another website service”",
+  "lead": "We combine real-world business experience, web development and digital marketing into one system that helps small and mid-sized businesses grow.",
+  "sections": {
+    "mission": {
+      "title": "Our mission",
+      "body": "Our mission is to make the digital part of your business simple: to know what you need, how much it costs and what you get in return – without buzzwords and hidden conditions."
+    },
+    "howWeWork": {
+      "title": "How we work",
+      "body": "We work transparently, in clear phases and with measurable goals. Every project is treated as a partnership, not a one-off gig.",
+      "points": {
+        "0": "First we listen – we learn about your business, market and goals.",
+        "1": "Then we propose a realistic solution, not “the most expensive option”.",
+        "2": "Finally, we look at the results and suggest next steps instead of leaving you on your own."
+      }
+    },
+    "signatureTitle": "Why does this matter?",
+    "signatureBody": "Digital channels are often crucial for business survival. Our goal is to make them your ally, not just another source of stress."
+  }
+},
+"services": {
+  "badge": "Services",
+  "heading": "What we can actually build for your business",
+  "lead": "From simple presentation websites to complex marketplace systems – we build solutions that make sense for your current stage and future growth.",
+  "items": [
+    {
+      "title": "Website development",
+      "desc": "Modern, fast and clean websites that look great on all devices – perfect for companies, NGOs, projects and personal brands.",
+      "note": "Optional multi-language support and future upgrade to a blog or online shop."
+    },
+    {
+      "title": "Online stores",
+      "desc": "E-commerce solutions focused on smooth checkout, secure payments and clear product and order management.",
+      "note": "Can be connected with shipping, invoicing and inventory in later phases."
+    },
+    {
+      "title": "Marketplace platforms",
+      "desc": "Multi-vendor platforms where many sellers can offer their products or services – ideal for niche communities and specialized markets.",
+      "note": "Hands-on experience with the Bagisto ecosystem and more complex billing and commission models."
+    },
+    {
+      "title": "AI assistants & automation",
+      "desc": "AI chatbots, customer support, content generation and automation of repetitive business tasks.",
+      "note": "We focus on practical use cases that save time instead of adding complexity."
+    },
+    {
+      "title": "Digital marketing",
+      "desc": "Google and Meta campaigns, basic SEO and content tailored to your target audience.",
+      "note": "The goal is measurable business results, not just “more likes”."
+    }
+  ],
+  "footerNote": "All services can be combined step by step – we start with what you really need now, with a clear plan for the next phase."
+},
+ "pages": {
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Our blog with topics on development, digital marketing and AI tools is coming soon.",
+    "soonTitle": "Coming Soon!",
+    "soonText": "We are actively preparing content – tutorials, guides, analyses and insights are on the way."
+  }
+},
+"terms": {
+  "heading": "Terms of Service",
+  "updated": "Last updated: 2025",
+  "intro": "By using the ProfiSajt.digital platform, you agree to these Terms of Service. If you do not agree, please discontinue use of our website, services, and contact forms.",
+
+  "section1": {
+    "title": "1. Nature of the Platform",
+    "text": "ProfiSajt.digital operates within the express-web ecosystem and offers website development, online store creation, marketplace solutions, digital marketing, AI assistants, and education services. All content on the site is informational and educational."
+  },
+
+  "section2": {
+    "title": "2. Use of Content",
+    "text": "All content (text, images, design, code, documentation) is the property of ProfiSajt.digital. Copying, redistributing, or commercial use without permission is prohibited. Content may be used within agreed-upon service projects."
+  },
+
+  "section3": {
+    "title": "3. User Responsibilities",
+    "text": "Users agree not to use the platform for illegal activities, spam, or attempts to compromise site security. Providing false information through forms is prohibited. We reserve the right to refuse cooperation."
+  },
+
+  "section4": {
+    "title": "4. Limitation of Liability",
+    "text": "We strive to provide accurate and up-to-date content, but do not guarantee uninterrupted availability, complete accuracy, or compatibility with all devices. We are not responsible for any damages resulting from use of the platform."
+  },
+
+  "section5": {
+    "title": "5. Communication and Offers",
+    "text": "By submitting information through contact forms, you consent to communication via email. Offers or estimates are not legally binding until a formal agreement is made."
+  },
+
+  "section6": {
+    "title": "6. Changes to Terms",
+    "text": "ProfiSajt.digital may update these Terms at any time without prior notice. The date of the last update appears at the top of this document."
+  },
+
+  "contact": {
+    "title": "Contact",
+    "text": "For additional information, contact us at: info{'@'}profisajt.digital"
+  }
+},
+"cookies": {
+  "heading": "Cookie Policy",
+  "updated": "Last updated: January 2025",
+  "intro": "This document explains how ProfiSajt.digital uses cookies and similar technologies to improve platform functionality, security, and the overall user experience.",
+
+  "section1": {
+    "title": "1. What Are Cookies?",
+    "text": "Cookies are small text files stored on your device when you visit our website. They ensure proper functionality, performance optimization, and basic analytics."
+  },
+
+  "section2": {
+    "title": "2. Types of Cookies We Use",
+    "text": "We use only the types of cookies necessary for the platform to function properly or to improve usability."
+  },
+
+  "section2List": {
+    "item1": "Essential cookies — required for core functionality and cannot be disabled.",
+    "item2": "Functional cookies — store your preferences such as language and layout settings.",
+    "item3": "Analytics cookies — used only for anonymous usage statistics."
+  },
+
+  "section3": {
+    "title": "3. Managing Cookies",
+    "text": "You can manage cookies through your browser settings. You may delete, block, or configure alerts before cookies are stored."
+  },
+
+  "section4": {
+    "title": "4. Changes to This Cookie Policy",
+    "text": "This policy may be updated periodically to comply with legal requirements or improve our services."
+  },
+
+  "section5": {
+    "title": "5. Contact",
+    "text": "For additional information related to cookies, you can contact us at: info (at) profisajt.digital"
+  }
+},
+"privacy": {
+  "heading": "Privacy Policy",
+  "updated": "Last updated: January 2025",
+  "intro": "This document explains how we collect, process, and store your data when using the ProfiSajt.digital platform and related services. Our mission is to ensure transparency, security, and lawful data processing in accordance with best practices and applicable laws of the Republic of Serbia.",
+
+  "section1": {
+    "title": "1. Data We Collect",
+    "text": "We collect only the data necessary for proper service delivery and platform usage. All data is provided voluntarily, and your privacy and security are our priority."
+  },
+
+  "section2": {
+    "title": "2. How We Use the Collected Data",
+    "text": "We use your data solely for communication, service improvement, delivering requested digital solutions, and enhancing the overall user experience."
+  },
+
+  "section3": {
+    "title": "3. Use of Cookies",
+    "text": "Our platform uses essential and functional cookies to properly display content, enable analytics, and improve performance. You can control or disable cookies in your browser settings."
+  },
+
+  "section4": {
+    "title": "4. Your Rights",
+    "text": "In accordance with the Law on Personal Data Protection, you have the right to access, correct, delete your data, withdraw consent, and submit an objection regarding the processing."
+  },
+
+  "section5": {
+    "title": "5. Data Storage and Protection",
+    "text": "Your data is stored securely and is not shared with third parties unless required to deliver a service (e.g., email servers, analytics systems), and always with proper data protection measures."
+  },
+
+  "section6": {
+    "title": "6. Liability and Limitations",
+    "text": "ProfiSajt.digital and the express-web community apply technical and organizational measures to ensure data protection but cannot guarantee absolute security in the event of internet incidents beyond our control."
+  },
+
+  "contact": {
+    "title": "Data Protection Contact",
+    "text": "If you have questions regarding privacy or wish to exercise any of your rights, you can contact us at: info (at) profisajt.digital"
+  }
+},
+"projectsPage": {
+  "title": "Projects",
+  "text": "Explore our full list of projects and see the solutions we've built.",
+  "button": "View all projects"
+},
+    "nav": {
+    "logoAria": "ProfiSajt.Digital homepage",
+    "pricing": "Pricing",
+    "projects": "Projects",
+    "blog": "Blog",
+    "contact": "Contact",
+    "docs": "Documentation",
+    "customers": "Customers",
+    "support": "Support",
+    "apps": "Apps",
+    "extra": "More",
+    "login": "Sign in",
+    "register": "Sign up",
+    "language": "Language"
+  },
+  "about": {
+    "title": "About Us",
+    "paragraph1": "Express Web is a small, focused team that builds custom web and e-commerce solutions. We don't chase 'quick wins' — our goal is sustainable software, a clear process, and measurable results.",
+    "paragraph2": "Our practice includes modern frontend (Vue/React), backend (Laravel/PHP), multivendor systems, internationalization (i18n), automated deployment, and SEO standards. We believe in transparency — we don’t fake references or 'polish' results.",
+    "paragraph3": "If you're building a product or want to improve sales and processes, let's start with small, deliverable parts, with clear goals and deadlines. After that, we scale iteratively."
+  },
+  "contact": {
+    "title": "Contact",
+    "company": "Radoje Božić PR Computer Programming EXPRESS WEB",
+    "addressLabel": "Address",
+    "address": "Vitezova Karađorđeve Zvezde 50, 11050 Belgrade (Palilula)",
+    "emailLabel": "Email",
+    "email": "office{'@'}express-web.express",
+    "phoneLabel": "Phone",
+    "phone": "+381 61 217 90 13",
+    "aboutUs": "About us",
+    "aboutText": "We build custom web & e-commerce solutions with a focus on efficient development, transparent process, and measurable results.",
+    "formTitle": "Send a message",
+    "name": "Full name",
+    "yourEmail": "Your email",
+    "phoneOptional": "Phone (optional)",
+    "subjectOptional": "Subject (optional)",
+    "message": "Message",
+    "send": "Send",
+    "success": "Your message has been sent.",
+    "error": "Something went wrong. Please try again.",
+    "requiredError": "Please fill in the required fields.",
+    "invalidEmail": "Invalid email address.",
+    "consentLabel": "I agree that my data will be used for contact purposes only.",
+    "openInMap": "Open in map"
+  },
+  "projects": {
+    "title": "Projects",
+    "liveProjects": "Our live projects",
+    "templates": "Cruip templates (preview)",
+    "wpCoBuild": "Co-building a WP site (client + ChatGPT + Express Web)"
+  },
+  "pricing": {
+    "title": "Plans that match your needs",
+    "subtitle": "No matter how many team members you have – our pricing is simple, transparent and adapts to the size of your company.",
+    "perMonth": "month",
+    "toggle": {
+      "yearly": "Bill Yearly",
+      "monthly": "Bill Monthly",
+      "discount": "-20%"
+    },
+    "cta": "Try for free",
+    "plans": {
+      "hobby": {
+        "name": "Hobby",
+        "desc": "For hobby, staging sites, and side hustles.",
+        "features": ["2 pages", "Limited traffic", "50 form submissions", "1,000 visitors/mo"]
+      },
+      "basic": {
+        "name": "Basic",
+        "desc": "For relatively simple, static sites and landing pages.",
+        "features": ["150 pages", "Custom domain", "200 form submissions", "10,000 visitors/mo"]
+      },
+      "business": {
+        "name": "Business",
+        "desc": "For larger sites, blogs, and other data-driven content.",
+        "features": ["150 pages", "Custom domain", "500 form submissions", "50,000 visitors/mo"]
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "desc": "For those needing an enterprise-grade solution.",
+        "features": ["150 pages", "Custom domain", "500 form submissions", "50,000 visitors/mo"]
+      }
+    }
+  },
+  "compare": {
+    "cta": "Free trial",
+    "plans": {
+      "hobby": "Hobby",
+      "basic": "Basic",
+      "business": "Business",
+      "enterprise": "Enterprise"
+    },
+    "sections": {
+      "key": "Key features",
+      "hosting": "Hosting",
+      "features": "Features",
+      "creation": "Creation"
+    },
+    "labels": {
+      "translatedWords": "Translated Words",
+      "searchLimit": "Search Page Limit",
+      "customFonts": "Custom Fonts",
+      "codeEditor": "Code Editor",
+      "bandwidth": "Bandwidth",
+      "visitors": "Visitors",
+      "maxUpload": "Max Upload Size",
+      "ssl": "SSL Certificate",
+      "createdWords": "Created Words",
+      "teamProjects": "Team Projects"
+    },
+    "values": {
+      "unlimited": "Unlimited",
+      "custom": "Custom"
+    },
+    "tooltips": {
+      "translatedWords": "Total words processed via translation features.",
+      "searchLimit": "Maximum number of pages we crawl for analysis.",
+      "customFonts": "Upload and use your own fonts.",
+      "codeEditor": "Built-in editor for custom code blocks.",
+      "bandwidth": "Monthly bandwidth allocation.",
+      "visitors": "Estimated unique visitors per month.",
+      "maxUpload": "Maximum file size per upload.",
+      "ssl": "Encrypted traffic via SSL.",
+      "createdWords": "Words generated with our tools.",
+      "teamProjects": "Create and manage shared projects with your team."
+    }
+  },
+  "faqs": {
+    "heading": "Questions we often get",
+    "items": [
+      {
+        "question": "What makes ProfiSajt.digital different from the competition?",
+          "answer": "ProfiSajt.digital is simple and intuitive, similar to other popular website builders. However, its true strength lies in advanced AI technology that enables fast website creation and effortless customization."
+      },
+      {
+        "question": "Can I cancel my plan at any time?",
+        "answer": "Yes, but you'll still pay the remainder of the term for the plan you signed up for.",
+        "active": true
+      },
+      {
+        "question": "Can I cancel my workspace plan at any time?",
+        "answer": "Yes, but you'll still pay the remainder of the term for the plan you signed up for."
+      },
+      {
+        "question": "What kind of support does Simple provide?",
+        "answer": "Support is available 24/7 via email, chat, and phone. We're here to help with any questions or concerns."
+      },
+      {
+        "question": "Can my clients or coworkers upload their own content?",
+        "answer": "Yes! You can invite clients or coworkers to collaborate on projects, and they can upload their own content."
+      },
+      {
+        "question": "How much traffic can Simple hosting handle?",
+        "answer": "Our hosting plans are designed to handle high traffic volumes, so your site performs well under pressure."
+      },
+      {
+        "question": "Are Simple websites SEO-friendly?",
+        "answer": "Yes! Simple is built with SEO in mind, so you can easily optimize your site for search engines."
+      }
+    ]
+  },
+  "postSingle": {
+    "backToBlog": "Back To Blog",
+    "title": "How to migrate to serverless hosting",
+    "author": "Alexandra Moore",
+    "date": "July 22, 2027",
+
+    "p1": "In the ever-evolving landscape of technology, one paradigm shift that has garnered significant attention and adoption is serverless computing. Serverless architecture, often misunderstood as the absence of servers, actually refers to outsourcing server management and maintenance to a third-party cloud provider.",
+    "p2": "This innovative approach offers numerous benefits, including scalability, reduced operational overhead, and cost efficiency. In this blog post, we'll explore the journey of migrating to serverless hosting and the advantages it brings.",
+
+    "h2_serverless": "About Serverless Hosting",
+    "p3": "Traditionally, hosting applications required managing servers, provisioning resources, and handling scaling demands.",
+    "p4_html": "Cloud providers such as <a href=\"#0\">AWS Lambda</a>, <a href=\"#0\">Google Cloud</a> Functions, and <a href=\"#0\">Microsoft Azure</a> Functions offer serverless platforms where developers can upload their code, define triggers, and let the platform handle the rest.",
+    "quote": "We're excited to partner with Vercel on bringing the latest state of the art open source machine learning models to more AI Engineers. We believe that AI should be easy to run and integrate into any web application.",
+    "p5_html": "Serverless platforms are inherently designed for high availability and fault tolerance. With built-in redundancy and automatic failover mechanisms, applications hosted on <a href=\"#0\">serverless platforms</a> are resilient to infrastructure failures, ensuring uninterrupted service delivery.",
+
+    "h2_benefits": "Benefits of Serverless Hosting",
+    "benefit1_html": "<strong>Scalability</strong>: Serverless platforms automatically scale resources based on demand. Whether your application experiences a sudden spike in traffic or encounters periods of low activity, the platform dynamically adjusts resources to match the workload, ensuring optimal performance without manual intervention.",
+    "benefit2_html": "<strong>Cost Efficiency</strong>: With serverless hosting, you pay only for the resources consumed during execution, eliminating the need to provision and maintain idle servers. This pay-per-use model can result in significant cost savings, especially for applications with unpredictable or variable workloads.",
+    "benefit3_html": "<strong>Reduced Operational Complexity</strong>: Managing servers, monitoring system health, and applying security patches are all responsibilities handled by the serverless platform. This reduces the operational burden on development teams, allowing them to focus on delivering features and improving the user experience.",
+
+    "h2_guide": "Step-by-Step Guide",
+    "p6_html": "Evaluate your existing application architecture and identify components suitable for migration to a serverless model. <strong>Functions or modules that can operate independently</strong> and have well-defined inputs and outputs are ideal candidates for serverless deployment.",
+    "p7": "Restructure your application to align with the serverless paradigm. Decompose monolithic components into smaller, more granular functions that can be independently deployed and scaled.",
+
+    "h2_conclusion": "Conclusion",
+    "p8_html": "Migrating to serverless hosting represents a transformative shift in the way applications are developed, deployed, and managed. By leveraging the scalability, cost efficiency, and operational simplicity of serverless architecture, organizations can unlock new opportunities for innovation and agility. While the migration process may require careful planning and execution, the <a href=\"#0\">benefits of serverless</a> hosting far outweigh the initial investment, paving the way for a more scalable, resilient, and cost-effective future in cloud computing.",
+
+    "newsletter": {
+      "heading": "Get all of our updates directly to your inbox.",
+      "placeholder": "Your email...",
+      "cta": "Subscribe"
+    },
+
+    "toc": {
+      "title": "On this page",
+      "serverless": "About Serverless Hosting",
+      "benefits": "Benefits of Serverless Hosting",
+      "guide": "Step-by-Step Guide",
+      "conclusion": "Conclusion"
+    }
+  },
+  "blogList": {
+    "heading": "The Simple blog",
+    "subheading": "Content for developers, product, and digital experts.",
+    "categories": {
+      "all": "All",
+      "interviews": "Interviews",
+      "inspiration": "Inspiration",
+      "updates": "Updates",
+      "product": "Product",
+      "misc": "Miscellaneous"
+    },
+    "excerpt": "In this blog post, we'll share technical details on how we built this state-of-the-art web form tracking system, and describe how teams at Simple interact with the data quality metrics that underlie our design builder network.",
+    "readMore": "Read more",
+    "loadMore": "Load more",
+    "articles": {
+      "a1": { "author": "Alexandra Moore", "title": "Simple's system for tracking and validating web forms" },
+      "a2": { "author": "Mark Cruppet", "title": "Introducing AI SDK 3.0 with UI support" },
+      "a3": { "author": "Alexandra Moore", "title": "8 ways to improve feature adoption (includes strategies)" },
+      "a4": { "author": "Mark Cruppet", "title": "How to migrate to serverless hosting" },
+      "a5": { "author": "Alexandra Moore", "title": "Creating a robust platform for documentation with Simple" },
+      "a6": { "author": "Mark Cruppet", "title": "How Simple helps xWeb manage over 4K sites" },
+      "a7": { "author": "Alexandra Moore", "title": "Optimizing performance for over 6M monthly visitors" },
+      "a8": { "author": "Mark Cruppet", "title": "Revolutionizing video editing on the web with Simple" }
+    }
+  },
+  "supportHero": {
+    "title": "How can we help?",
+    "subtitle": "Need support or have a question about ProfiSajt Digital? We're here to help.",
+    "searchButton": {
+      "label": "Search",
+      "placeholder": " help (e.g., creating a site, members, etc.)",
+      "aria": "Open help search"
+    }
+  },
+  "faqs02": {
+    "sections": {
+      "gettingStarted": {
+        "title": "Getting Started",
+        "items": {
+          "1": {
+            "question": "Getting started with Simple",
+            "answer": "Simple is designed to be user-friendly and intuitive, while Complex is more robust and feature-rich. Both tools are great for creating websites, but Simple is ideal for beginners and small businesses, while Complex is better suited for larger organizations and developers."
+          },
+          "2": {
+            "question": "Promotional and free plan trials",
+            "answer": "Yes, but you'll still pay the remainder of the term for the plan you signed up for."
+          },
+          "3": {
+            "question": "I'm unable to verify my account",
+            "answer": "Yes, but you'll still pay the remainder of the term for the plan you signed up for."
+          },
+          "4": {
+            "question": "Copyright (DMCA) Takedown Notice",
+            "answer": "Support is available 24/7 via email, chat, and phone. We're here to help you with any questions or concerns you may have."
+          },
+          "5": {
+            "question": "How to report an unrecognized charge",
+            "answer": "Yes! You can invite clients or coworkers to collaborate on your projects, and they can upload their own content."
+          }
+        }
+      },
+      "profilePlans": {
+        "title": "Profile & plans",
+        "items": {
+          "1": {
+            "question": "Change with my paid plan",
+            "answer": "Simple is designed to be user-friendly and intuitive, while Complex is more robust and feature-rich. Both tools are great for creating websites, but Simple is ideal for beginners and small businesses, while Complex is better suited for larger organizations and developers."
+          },
+          "2": {
+            "question": "Cancel my subscription",
+            "answer": "Yes, but you'll still pay the remainder of the term for the plan you signed up for."
+          },
+          "3": {
+            "question": "I am unable to edit my profile",
+            "answer": "Yes, but you'll still pay the remainder of the term for the plan you signed up for."
+          },
+          "4": {
+            "question": "How to delete my account",
+            "answer": "Support is available 24/7 via email, chat, and phone. We're here to help you with any questions or concerns you may have."
+          },
+          "5": {
+            "question": "How to reach customer support",
+            "answer": "Yes! You can invite clients or coworkers to collaborate on your projects, and they can upload their own content."
+          }
+        }
+      },
+      "accounts": {
+        "title": "Accounts",
+        "items": {
+          "1": {
+            "question": "How to change my password",
+            "answer": "Simple is designed to be user-friendly and intuitive, while Complex is more robust and feature-rich. Both tools are great for creating websites, but Simple is ideal for beginners and small businesses, while Complex is better suited for larger organizations and developers."
+          },
+          "2": {
+            "question": "How to change my email address",
+            "answer": "Yes, but you'll still pay the remainder of the term for the plan you signed up for."
+          },
+          "3": {
+            "question": "How to change my username",
+            "answer": "Yes, but you'll still pay the remainder of the term for the plan you signed up for."
+          },
+          "4": {
+            "question": "How to change my billing information",
+            "answer": "Support is available 24/7 via email, chat, and phone. We're here to help you with any questions or concerns you may have."
+          },
+          "5": {
+            "question": "How to change my notification settings",
+            "answer": "Yes! You can invite clients or coworkers to collaborate on your projects, and they can upload their own content."
+          }
+        }
+      }
+    }
+  },
+  "heroApps": {
+  "title": "Languages, Frameworks & Platforms",
+  "subtitle": "Our development ecosystem is built on modern technologies that ensure stability, speed, and scalability for every project."
+},
+   "appList": {
+    "title": "Our Tech Stack",
+    "subtitle": "Languages, libraries and platforms we use on these projects.",
+    "sections": {
+      "languages": "Languages & Runtimes",
+      "frameworks": "Frameworks & Libraries",
+      "platforms": "CMS / Templates / Platforms"
+    },
+    "items": {
+      "languages": {
+        "js_ts": {
+          "name": "JavaScript / TypeScript",
+          "description": "Primary languages for frontend development; strict typing with TS where it adds value."
+        },
+        "php": {
+          "name": "PHP",
+          "description": "Backend/runtime for certain integrations and e-commerce (Bagisto / Laravel ecosystem)."
+        },
+        "node": {
+          "name": "Node.js",
+          "description": "Tooling, build pipeline (Vite), dev server and SSR utilities when needed."
+        },
+        "python": {
+          "name": "Python",
+          "description": "Scripting, utilities and data handling for specific tasks."
+        }
+      },
+      "frameworks": {
+        "vue3": {
+          "name": "Vue 3",
+          "description": "Core UI framework with Composition API and single-file components."
+        },
+        "vite": {
+          "name": "Vite",
+          "description": "Dev server and lightning-fast builds: ES modules, code splitting, HMR."
+        },
+        "tailwind": {
+          "name": "Tailwind CSS",
+          "description": "Utility-first styling with design tokens and responsive variants."
+        },
+        "vueRouter": {
+          "name": "Vue Router",
+          "description": "Client-side routing with nested routes and scroll behavior."
+        },
+        "pinia": {
+          "name": "Pinia",
+          "description": "State management: modular stores, devtools, type-safety friendly."
+        },
+        "vueI18n": {
+          "name": "Vue I18n",
+          "description": "Internationalization: messages, locale switching, lazy loading."
+        },
+        "http": {
+          "name": "Axios / Fetch",
+          "description": "HTTP client and native Fetch for API communication."
+        }
+      },
+      "platforms": {
+        "bagisto": {
+          "name": "Bagisto (Webkul)",
+          "description": "Laravel-based e-commerce: catalog, checkout, multi-vendor and marketplace modules."
+        },
+        "cruip": {
+          "name": "Cruip Templates",
+          "description": "Modern UI templates for fast deployment of marketing and landing pages."
+        },
+        "cloudways": {
+          "name": "Cloudways",
+          "description": "Managed cloud hosting (Debian stack), Git deploy, backups, and monitoring."
+        },
+        "namecheap": {
+          "name": "Namecheap",
+          "description": "Domain registrar and hosting partner — SSL certificates, DNS and reseller integrations."
+        },
+        "stripe": {
+          "name": "Stripe",
+          "description": "Payments, subscriptions, invoicing, and marketplace payouts with Stripe Connect."
+        },
+        "gha": {
+          "name": "GitHub Actions",
+          "description": "CI/CD pipelines for automated build, test and deployment workflows."
+        }
+      }
+    }
+  },
+  "common": {
+    "viewAll": "View All",
+    "loadMore": "Load more",
+    "featured": "Featured"
+  },
+  "auth": {
+    "signup": {
+      "title": "Create your account",
+      "fullName": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "password": "Password",
+      "placeholders": {
+        "fullName": "John Doe",
+        "email": "you{'@'}profisajt.digital",
+        "phone": "(+381) 000-000",
+        "password": "********"
+      },
+      "registerButton": "Register",
+      "googleButton": "Continue with Google",
+      "loading": "Creating your account...",
+      "or": "Or",
+      "terms": {
+        "prefix": "By signing up, you agree to the",
+        "tos": "Terms of Service",
+        "privacy": "Privacy Policy",
+        "and": "and"
+      },
+      "messages": {
+        "success": "Your account has been created successfully.",
+        "error": "There was a problem creating your account. Please try again."
+      }
+    },
+    "signin": {
+      "title": "Sign in to your account",
+      "email": "Email",
+      "password": "Password",
+      "button": "Sign In",
+      "loading": "Signing you in...",
+      "forgot": "Forgot password?",
+      "placeholders": {
+        "email": "you{'@'}profisajt.digital",
+        "password": "********"
+      },
+      "messages": {
+        "success": "You are successfully signed in.",
+        "error": "Invalid credentials. Please try again."
+      }
+    },
+    "reset": {
+      "title": "Reset password",
+      "subtitle": "Enter the email address associated with your account and we will send you a link to reset your password.",
+      "email": "Email",
+      "button": "Send reset link",
+      "loading": "Sending reset link...",
+      "backToLogin": "Back to sign in",
+      "placeholders": {
+        "email": "you{'@'}profisajt.digital"
+      },
+      "messages": {
+        "success": "If an account with that email exists, we have sent a password reset link.",
+        "error": "There was a problem sending the reset link. Please try again."
+      }
+    }
+  }
+  
 }

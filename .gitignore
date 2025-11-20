@@ -1,8 +1,18 @@
+# OS files
 .DS_Store
-node_modules
-/dist
+Thumbs.db
 
-# local env files
+# Node modules
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+*.local
+*.cache
+
+# Local env files
+.env
 .env.local
 .env.*.local
 
@@ -13,13 +23,23 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Editor directories and files
-.idea
-.vscode
+.idea/
+.vscode/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-!.github
-!.github/workflows
+# VS Code settings exceptions (ako želiš da zadržiš postavke repoa)
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# GitHub folder (DOZVOLITI u repou!)
+!.github/
+!.github/workflows/
+
+# Screenshots and temp exports (opciono)
+*.sketch
+*.psd
+*.tmp

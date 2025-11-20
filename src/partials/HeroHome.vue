@@ -20,20 +20,20 @@ const { t } = useI18n()
             class="mb-6 border-y [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1]"
             data-aos="zoom-y-out">
             <div class="flex justify-center -space-x-3 -mx-0.5">
-              <img class="rounded-full border-2 border-gray-50 box-content" src="../images/avatar-01.jpg" width="32"
-                height="32" alt="{{ t('hero.badge_alt_01') }}" />
-              <img class="rounded-full border-2 border-gray-50 box-content" src="../images/avatar-02.jpg" width="32"
-                height="32" alt="{{ t('hero.badge_alt_02') }}" />
-              <img class="rounded-full border-2 border-gray-50 box-content" src="../images/avatar-03.jpg" width="32"
-                height="32" alt="{{ t('hero.badge_alt_03') }}" />
-              <img class="rounded-full border-2 border-gray-50 box-content" src="../images/avatar-04.jpg" width="32"
-                height="32" alt="{{ t('hero.badge_alt_04') }}" />
-              <img class="rounded-full border-2 border-gray-50 box-content" src="../images/avatar-05.jpg" width="32"
-                height="32" alt="{{ t('hero.badge_alt_05') }}" />
-              <img class="rounded-full border-2 border-gray-50 box-content" src="../images/avatar-06.jpg" width="32"
-                height="32" alt="{{ t('hero.badge_alt_06') }}" />
+              <img class="rounded-full border-2 border-gray-50 box-content" src="../images/avatar-01.jpg" width="32" height="32" :alt="t('hero.badge_alt_01')" />
+              <img class="rounded-full border-2 border-gray-50 box-content" src="../images/avatar-02.jpg" width="32" height="32" :alt="t('hero.badge_alt_02')" />
+              <img class="rounded-full border-2 border-gray-50 box-content" src="../images/avatar-03.jpg" width="32" height="32" :alt="t('hero.badge_alt_03')" />
+              <img class="rounded-full border-2 border-gray-50 box-content" src="../images/avatar-04.jpg" width="32" height="32" :alt="t('hero.badge_alt_04')" />
+              <img class="rounded-full border-2 border-gray-50 box-content" src="../images/avatar-05.jpg" width="32" height="32" :alt="t('hero.badge_alt_05')" />
+              <img class="rounded-full border-2 border-gray-50 box-content" src="../images/avatar-06.jpg" width="32" height="32" :alt="t('hero.badge_alt_06')" />
             </div>
+              <p class="text-xs text-gray-500 mt-2">
+                {{ t('hero.badge_text') }}
+              </p>
           </div>
+          <p class="text-sm font-medium text-blue-600 mb-3" data-aos="zoom-y-out">
+            {{ t('hero.micro_promise') }}
+          </p>
           <h1
             class="text-5xl md:text-6xl font-bold mb-6 border-y [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1]"
             data-aos="zoom-y-out" data-aos-delay="150">{{ t('hero.title_line1') }}<br class="max-lg:hidden" />{{ t('hero.title_line2') }}</h1>
@@ -43,38 +43,75 @@ const { t } = useI18n()
               class="relative before:absolute before:inset-0 before:border-y before:[border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1]">
               <div class="relative max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center" data-aos="zoom-y-out"
                 data-aos-delay="450">
-                <a class="btn text-white bg-linear-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] hover:bg-[length:100%_150%] bg-[bottom] shadow-sm w-full mb-4 sm:w-auto sm:mb-0 group"
-                  href="#0">
+                <router-link
+                  class="btn text-white bg-linear-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] hover:bg-[length:100%_150%] bg-[bottom] shadow-sm w-full mb-4 sm:w-auto sm:mb-0 group"
+                  to="/contact"
+                >
                   <span class="relative inline-flex items-center">
-                    {{ t('hero.cta_primary') }} <span
-                      class="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform ml-1">-&gt;</span>
+                    {{ t('hero.cta_primary') }}
+                    <span class="tracking-normal text-blue-300 group-hover:translate-x-0.5 transition-transform ml-1">
+                      -&gt;
+                    </span>
                   </span>
-                </a>
-                <a class="btn text-gray-800 bg-white hover:bg-gray-50 shadow-sm w-full sm:w-auto sm:ml-4" href="#0">{{ t('hero.cta_secondary') }}
-                </a>
+                </router-link>
+
+                <router-link
+                  class="btn text-gray-800 bg-white hover:bg-gray-50 shadow-sm w-full sm:w-auto sm:ml-4"
+                  to="/projects"
+                >
+                  {{ t('hero.cta_secondary') }}
+                </router-link>
+
               </div>
             </div>
           </div>
         </div>
 
         <!-- Hero image -->
-        <div class="max-w-3xl mx-auto" data-aos="zoom-y-out" data-aos-delay="600">
-          <div
-            class="relative aspect-video bg-gray-900 rounded-2xl px-5 py-3 shadow-xl before:absolute before:-inset-5 before:border-y before:[border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1] before:pointer-events-none after:absolute after:-inset-5 after:border-x after:[border-image:linear-gradient(to_bottom,transparent,--theme(--color-slate-300/.8),transparent)1] after:-z-10">
+          <div class="max-w-3xl mx-auto" data-aos="zoom-y-out" data-aos-delay="600">
             <div
-              class="relative flex items-center justify-between before:block before:w-[41px] before:h-[9px] before:[background-image:radial-gradient(circle_at_4.5px_4.5px,var(--color-gray-600)_4.5px,transparent_0)] before:bg-[length:16px_9px] after:w-[41px] mb-8">
-              <span class="text-white font-medium text-[13px]">cruip.com</span>
-            </div>
-            <div class="text-gray-500 text-sm font-mono [&_span]:opacity-0">
-              <span class="text-gray-200 animate-[code-1_10s_infinite]">npm login</span> <span
-                class="animate-[code-2_10s_infinite]">--registry=https://npm.pkg.github.com</span><br />
-              <span class="animate-[code-3_10s_infinite]">--scope=@phanatic</span> <span
-                class="animate-[code-4_10s_infinite]">Successfully logged-in.</span><br /><br />
-              <span class="text-gray-200 animate-[code-5_10s_infinite]">npm publish</span><br />
-              <span class="animate-[code-6_10s_infinite]">Package published.</span>
+              class="relative aspect-video bg-gray-900 rounded-2xl px-5 py-3 shadow-xl
+                    before:absolute before:-inset-5 before:border-y before:[border-image:linear-gradient(to_right,transparent,--theme(--color-slate-300/.8),transparent)1] before:pointer-events-none
+                    after:absolute after:-inset-5 after:border-x after:[border-image:linear-gradient(to_bottom,transparent,--theme(--color-slate-300/.8),transparent)1] after:-z-10"
+            >
+              <div
+                class="relative flex items-center justify-between
+                      before:block before:w-[41px] before:h-[9px]
+                      before:[background-image:radial-gradient(circle_at_4.5px_4.5px,var(--color-gray-600)_4.5px,transparent_0)]
+                      before:bg-[length:16px_9px] after:w-[41px] mb-8"
+              >
+                <span class="text-white font-medium text-[13px]">
+                  {{ t('hero.code_title') }}
+                </span>
+              </div>
+
+              <div class="text-gray-500 text-sm font-mono [&_span]:opacity-0">
+                <span class="text-gray-200 animate-[code-1_10s_infinite]">
+                  {{ t('hero.code_line1') }}
+                </span>
+                <br />
+                <span class="animate-[code-2_10s_infinite]">
+                  {{ t('hero.code_line2') }}
+                </span>
+                <br />
+                <span class="animate-[code-3_10s_infinite]">
+                  {{ t('hero.code_line3') }}
+                </span>
+                <br />
+                <span class="animate-[code-4_10s_infinite]">
+                  {{ t('hero.code_line4') }}
+                </span>
+                <br /><br />
+                <span class="text-gray-200 animate-[code-5_10s_infinite]">
+                  {{ t('hero.code_line5') }}
+                </span>
+                <br />
+                <span class="animate-[code-6_10s_infinite]">
+                  {{ t('hero.code_line6') }}
+                </span>
+              </div>
             </div>
           </div>
-        </div>
 
       </div>
 

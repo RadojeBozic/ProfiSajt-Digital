@@ -2,7 +2,7 @@
 import Header from './../partials/Header.vue'
 import HeroApps from '../partials/HeroApps.vue'
 import AppList from '../partials/AppList.vue'
-import CtaAlternative from '../partials/CtaAlternative.vue'
+import Cta from '../partials/Cta.vue'
 import Footer from './../partials/Footer.vue'
 </script>
 
@@ -19,11 +19,7 @@ import Footer from './../partials/Footer.vue'
       <!-- Page sections -->
       <HeroApps />
       <AppList />
-      <CtaAlternative
-        heading="Create your next project with Simple"
-        buttonText="Start Free Trial"
-        buttonLink="#0"
-      />  
+      <Cta />  
 
     </main>
 

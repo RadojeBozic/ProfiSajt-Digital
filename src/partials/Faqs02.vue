@@ -1,74 +1,38 @@
 <script setup>
+import { ref, watchEffect } from 'vue'
 import Accordion from '../partials/Accordion.vue'
+import { useI18n } from 'vue-i18n'
 
-const faqs01 = [
-  {
-    question: 'Getting started with Simple',
-    answer: 'Simple is designed to be user-friendly and intuitive, while Complex is more robust and feature-rich. Both tools are great for creating websites, but Simple is ideal for beginners and small businesses, while Complex is better suited for larger organizations and developers.'
-  },
-  {
-    question: 'Promotional and free plan trials',
-    answer: 'Yes, but you\'ll still pay the remainder of the term for the plan you signed up for.'
-  },
-  {
-    question: 'I\'m unable to verify my account',
-    answer: 'Yes, but you\'ll still pay the remainder of the term for the plan you signed up for.'
-  },
-  {
-    question: 'Copyright (DMCA) Takedown Notice',
-    answer: 'Support is available 24/7 via email, chat, and phone. We\'re here to help you with any questions or concerns you may have.'
-  },
-  {
-    question: 'How to report an unrecognized charge',
-    answer: 'Yes! You can invite clients or coworkers to collaborate on your projects, and they can upload their own content.'
-  }
-]
+const { t, tm } = useI18n()
 
-const faqs02 = [
-  {
-    question: 'Change with my paid plan',
-    answer: 'Simple is designed to be user-friendly and intuitive, while Complex is more robust and feature-rich. Both tools are great for creating websites, but Simple is ideal for beginners and small businesses, while Complex is better suited for larger organizations and developers.'
-  },
-  {
-    question: 'Cancel my subscription',
-    answer: 'Yes, but you\'ll still pay the remainder of the term for the plan you signed up for.'
-  },
-  {
-    question: 'I am unable to edit my profile',
-    answer: 'Yes, but you\'ll still pay the remainder of the term for the plan you signed up for.'
-  },
-  {
-    question: 'How to delete my account',
-    answer: 'Support is available 24/7 via email, chat, and phone. We\'re here to help you with any questions or concerns you may have.'
-  },
-  {
-    question: 'How to reach customer support',
-    answer: 'Yes! You can invite clients or coworkers to collaborate on your projects, and they can upload their own content.'
-  }
-]
+// Reaktivna struktura koja se puni iz i18n
+const sections = ref({
+  gettingStarted: { title: '', items: [] },
+  profilePlans:  { title: '', items: [] },
+  accounts:      { title: '', items: [] },
+})
 
-const faqs03 = [
-  {
-    question: 'How to change my password',
-    answer: 'Simple is designed to be user-friendly and intuitive, while Complex is more robust and feature-rich. Both tools are great for creating websites, but Simple is ideal for beginners and small businesses, while Complex is better suited for larger organizations and developers.'
-  },
-  {
-    question: 'How to change my email address',
-    answer: 'Yes, but you\'ll still pay the remainder of the term for the plan you signed up for.'
-  },
-  {
-    question: 'How to change my username',
-    answer: 'Yes, but you\'ll still pay the remainder of the term for the plan you signed up for.'
-  },
-  {
-    question: 'How to change my billing information',
-    answer: 'Support is available 24/7 via email, chat, and phone. We\'re here to help you with any questions or concerns you may have.'
-  },
-  {
-    question: 'How to change my notification settings',
-    answer: 'Yes! You can invite clients or coworkers to collaborate on your projects, and they can upload their own content.'
+watchEffect(() => {
+  // tm vraća objekte – pretvaramo u niz redosledom vrednosti
+  const gs = tm('faqs02.sections.gettingStarted.items') || {}
+  const pp = tm('faqs02.sections.profilePlans.items')  || {}
+  const ac = tm('faqs02.sections.accounts.items')      || {}
+
+  sections.value = {
+    gettingStarted: {
+      title: t('faqs02.sections.gettingStarted.title'),
+      items: Object.values(gs),
+    },
+    profilePlans: {
+      title: t('faqs02.sections.profilePlans.title'),
+      items: Object.values(pp),
+    },
+    accounts: {
+      title: t('faqs02.sections.accounts.title'),
+      items: Object.values(ac),
+    },
   }
-]
+})
 </script>
 
 <template>
@@ -78,37 +42,46 @@ const faqs03 = [
         <div class="max-w-3xl mx-auto space-y-12">
           <!-- Getting started -->
           <div>
-            <h2 class="text-xl font-bold mb-5">Getting Started</h2>
+            <h2 class="text-xl font-bold mb-5">
+              {{ sections.gettingStarted.title }}
+            </h2>
             <div class="space-y-2">
-              <template v-for="(faq, index) in faqs01">
+              <template v-for="(faq, index) in sections.gettingStarted.items" :key="'gs-' + index">
                 <Accordion :title="faq.question" :id="`faqs-01-${index}`" :active="faq.active">
                   {{ faq.answer }}
                 </Accordion>
               </template>
             </div>
           </div>
+
           <!-- Profile & plans -->
           <div>
-            <h2 class="text-xl font-bold mb-5">Profile & plans</h2>
+            <h2 class="text-xl font-bold mb-5">
+              {{ sections.profilePlans.title }}
+            </h2>
             <div class="space-y-2">
-              <template v-for="(faq, index) in faqs02">
+              <template v-for="(faq, index) in sections.profilePlans.items" :key="'pp-' + index">
                 <Accordion :title="faq.question" :id="`faqs-02-${index}`" :active="faq.active">
                   {{ faq.answer }}
                 </Accordion>
               </template>
             </div>
           </div>
+
           <!-- Accounts -->
           <div>
-            <h2 class="text-xl font-bold mb-5">Accounts</h2>
+            <h2 class="text-xl font-bold mb-5">
+              {{ sections.accounts.title }}
+            </h2>
             <div class="space-y-2">
-              <template v-for="(faq, index) in faqs03">
+              <template v-for="(faq, index) in sections.accounts.items" :key="'ac-' + index">
                 <Accordion :title="faq.question" :id="`faqs-03-${index}`" :active="faq.active">
                   {{ faq.answer }}
                 </Accordion>
               </template>
             </div>
           </div>
+
         </div>
       </div>
     </div>
