@@ -15,23 +15,41 @@ const loading = ref(false)
 const errorMessage = ref('')
 const successMessage = ref('')
 
-// ovo ćemo iskoristiti kasnije za backend
+// Baza za API – čita iz Vite .env, fallback je direktan URL
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://api.profisajt.digital/api'
+const REGISTER_URL = `${API_BASE_URL.replace(/\/$/, '')}/register`
+
 const onSubmit = async () => {
   loading.value = true
   errorMessage.value = ''
   successMessage.value = ''
 
   try {
-    // TODO: ovde ide poziv ka backendu (axios/fetch)
-    console.log('Form data:', form.value)
+    const res = await fetch(REGISTER_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify(form.value),
+    })
+
+    const data = await res.json().catch(() => null)
+
+    if (!res.ok) {
+      throw new Error(data?.message || 'Registration failed.')
+    }
+
     successMessage.value = t('auth.signup.messages.success')
+    form.value = { name: '', email: '', phone: '', password: '' }
   } catch (error) {
-    errorMessage.value = t('auth.signup.messages.error')
+    errorMessage.value = error.message || 'Došlo je do greške pri registraciji.'
   } finally {
     loading.value = false
   }
 }
 </script>
+
 
 <template>
   <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">

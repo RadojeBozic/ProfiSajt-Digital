@@ -1,8 +1,10 @@
 <script setup>
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useRouter } from 'vue-router'
 
 const { t } = useI18n()
+const router = useRouter()
 
 const form = ref({
   email: '',
@@ -13,23 +15,69 @@ const loading = ref(false)
 const errorMessage = ref('')
 const successMessage = ref('')
 
+// Kao i kod SignUp.vue
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://api.profisajt.digital/api'
+const LOGIN_URL = `${API_BASE_URL.replace(/\/$/, '')}/login`
+
 const onSubmit = async () => {
   loading.value = true
   errorMessage.value = ''
   successMessage.value = ''
 
   try {
-    // TODO: ovde će ići login prema profisajt-api backendu
-    console.log('Login attempt:', form.value)
+    const res = await fetch(LOGIN_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        email: form.value.email,
+        password: form.value.password,
+      }),
+    })
+
+    const data = await res.json().catch(() => null)
+
+    if (!res.ok) {
+      // Laravel 422: validacija
+      if (data?.errors) {
+        const firstError = Object.values(data.errors)[0][0]
+        throw new Error(firstError)
+      }
+
+      // Laravel ValidationException (pogrešni kredencijali)
+      if (data?.message) {
+        throw new Error(data.message)
+      }
+
+      throw new Error(t('auth.signin.messages.error'))
+    }
+
+    // ✅ Uspešan login – snimamo token i user-a
+    if (data?.token) {
+      localStorage.setItem('ps_token', data.token)
+    }
+    if (data?.user) {
+      localStorage.setItem('ps_user', JSON.stringify(data.user))
+    }
 
     successMessage.value = t('auth.signin.messages.success')
+
+    // Po želji: mali delay pa redirect (npr. na Home ili Dashboard)
+    setTimeout(() => {
+      router.push('/') // ili '/dashboard' kasnije
+    }, 800)
+
   } catch (error) {
-    errorMessage.value = t('auth.signin.messages.error')
+    errorMessage.value = error.message || t('auth.signin.messages.error')
   } finally {
     loading.value = false
   }
 }
 </script>
+
+
 
 <template>
   <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
@@ -59,60 +107,56 @@ const onSubmit = async () => {
 
                 <!-- Forma -->
                 <form @submit.prevent="onSubmit">
-                  <div class="space-y-4">
-
-                    <!-- Email -->
-                    <div>
-                      <label class="block text-sm text-gray-700 font-medium mb-1" for="email">
-                        {{ t('auth.signin.email') }}
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        v-model="form.email"
-                        class="form-input py-2 w-full"
-                        :placeholder="t('auth.signin.placeholders.email')"
-                        required
-                      />
-                    </div>
-
-                    <!-- Password -->
-                    <div>
-                      <label class="block text-sm text-gray-700 font-medium mb-1" for="password">
-                        {{ t('auth.signin.password') }}
-                      </label>
-                      <input
-                        id="password"
-                        type="password"
-                        autocomplete="on"
-                        v-model="form.password"
-                        class="form-input py-2 w-full"
-                        :placeholder="t('auth.signin.placeholders.password')"
-                        required
-                      />
-                    </div>
-
+                <div class="space-y-4">
+                  <div>
+                    <label class="block text-sm text-gray-700 font-medium mb-1" for="email">
+                      {{ t('auth.signin.email') }}
+                    </label>
+                    <input
+                      id="email"
+                      v-model="form.email"
+                      class="form-input py-2 w-full"
+                      type="email"
+                      :placeholder="t('auth.signin.placeholders.email')"
+                      required
+                    />
                   </div>
 
-                  <!-- Submit dugme -->
-                  <div class="mt-6">
-                    <button
-                      type="submit"
-                      class="btn text-white bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] hover:bg-[length:100%_150%] bg-[bottom] shadow w-full"
-                      :disabled="loading"
-                    >
-                      <span v-if="!loading">{{ t('auth.signin.button') }}</span>
-                      <span v-else>{{ t('auth.signin.loading') }}</span>
-                    </button>
+                  <div>
+                    <label class="block text-sm text-gray-700 font-medium mb-1" for="password">
+                      {{ t('auth.signin.password') }}
+                    </label>
+                    <input
+                      id="password"
+                      v-model="form.password"
+                      class="form-input py-2 w-full"
+                      type="password"
+                      autocomplete="on"
+                      :placeholder="t('auth.signin.placeholders.password')"
+                      required
+                    />
                   </div>
+                </div>
 
-                  <!-- Error & Success poruke -->
-                  <div class="mt-4 text-center">
-                    <p v-if="errorMessage" class="text-red-500 text-sm">{{ errorMessage }}</p>
-                    <p v-if="successMessage" class="text-green-500 text-sm">{{ successMessage }}</p>
-                  </div>
+                <div class="space-y-3 mt-6">
+                  <button
+                    type="submit"
+                    class="btn text-white bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] hover:bg-[length:100%_150%] bg-[bottom] shadow w-full"
+                    :disabled="loading"
+                  >
+                    <span v-if="!loading">{{ t('auth.signin.loginButton') }}</span>
+                    <span v-else>{{ t('auth.signin.loading') }}</span>
+                  </button>
+                </div>
 
-                </form>
+                <div class="mt-4 space-y-1" v-if="errorMessage">
+                  <p class="text-sm text-red-500 text-center">{{ errorMessage }}</p>
+                </div>
+                <div class="mt-4 space-y-1" v-if="successMessage">
+                  <p class="text-sm text-green-500 text-center">{{ successMessage }}</p>
+                </div>
+              </form>
+
 
                 <!-- Bottom link -->
                 <div class="text-center mt-6">
