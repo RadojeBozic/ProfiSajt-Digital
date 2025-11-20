@@ -116,7 +116,7 @@ Sva prava zadržana.
 
 ## Autor Express Web / ProfiSajt.digital
 - Website: https://profisajt.digital
-- Email: office{'@'}express-web.express
+- Email: office@express-web.express
 
-- Radoje Božić - Frontend&Backend Developer
-- Email: radojebozic1966{'@'}gmail.com
+- Radoje Božić - Frontend & Backend Developer
+- Email: radojebozic1966@gmail.com
