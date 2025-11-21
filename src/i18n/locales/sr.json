@@ -885,5 +885,33 @@
         "error": "Došlo je do problema prilikom slanja linka. Pokušajte ponovo."
       }
     }
+  },
+  "welcomePage": {
+  "hello": "Dobrodošli nazad,",
+  "title": "Vaš korisnički nalog, ",
+  "subtitle": "Ovde ćete uskoro videti svoje projekte, aktivnosti i preporuke...",
+  "cta": {
+    "contact": "Kontaktirajte nas",
+    "explore": "Nazad na početnu"
+  },
+  "cards": {
+    "profile": {
+      "title": "Profil",
+      "text": "Uskoro: uređivanje imena, email adrese, telefona i preferencija."
+    },
+    "activity": {
+      "title": "Aktivnosti",
+      "text": "Pregled poslatih upita, dogovorenih projekata i statusa implementacije."
+    },
+    "security": {
+      "title": "Bezbednost",
+      "text": "Promena lozinke, pregled uređaja i dodatne mere zaštite naloga."
+    }
+  },
+  "account": {
+    "loggedInAs": "Prijavljeni ste kao",
+    "logout": "Odjava",
+    "deleteDisabled": "Brisanje naloga (uskoro)"
   }
+}
 }

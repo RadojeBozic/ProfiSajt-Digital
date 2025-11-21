@@ -250,6 +250,12 @@ const router = createRouter({
   component: ResetPassword,
   meta: { layout: 'auth' },
 },
+{
+  path: '/welcome',
+  name: 'welcome',
+  component: () => import('../pages/WelcomePage.vue'),
+  meta: { requiresAuth: true },
+},
   { path: '/about', 
     component: AboutPage,
     meta: {

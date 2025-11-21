@@ -1,10 +1,12 @@
 <script setup>
 import { ref } from 'vue'
-import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
+import { useI18n } from 'vue-i18n'
+import { useAuth } from '../composables/useAuth'
 
 const { t } = useI18n()
 const router = useRouter()
+const { setAuth } = useAuth()
 
 const form = ref({
   email: '',
@@ -13,23 +15,21 @@ const form = ref({
 
 const loading = ref(false)
 const errorMessage = ref('')
-const successMessage = ref('')
 
-// Kao i kod SignUp.vue
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://api.profisajt.digital/api'
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL || 'https://api.profisajt.digital/api'
 const LOGIN_URL = `${API_BASE_URL.replace(/\/$/, '')}/login`
 
 const onSubmit = async () => {
   loading.value = true
   errorMessage.value = ''
-  successMessage.value = ''
 
   try {
     const res = await fetch(LOGIN_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json',
+        Accept: 'application/json',
       },
       body: JSON.stringify({
         email: form.value.email,
@@ -37,45 +37,25 @@ const onSubmit = async () => {
       }),
     })
 
-    const data = await res.json().catch(() => null)
+    const data = await res.json()
 
     if (!res.ok) {
-      // Laravel 422: validacija
-      if (data?.errors) {
-        const firstError = Object.values(data.errors)[0][0]
-        throw new Error(firstError)
-      }
-
-      // Laravel ValidationException (pogrešni kredencijali)
-      if (data?.message) {
-        throw new Error(data.message)
-      }
-
-      throw new Error(t('auth.signin.messages.error'))
+      throw new Error(data?.message || t('auth.login.messages.error'))
     }
 
-    // ✅ Uspešan login – snimamo token i user-a
-    if (data?.token) {
-      localStorage.setItem('ps_token', data.token)
-    }
-    if (data?.user) {
-      localStorage.setItem('ps_user', JSON.stringify(data.user))
-    }
+    // backend vraća: { message, token, user }
+    setAuth(data.user, data.token)
 
-    successMessage.value = t('auth.signin.messages.success')
-
-    // Po želji: mali delay pa redirect (npr. na Home ili Dashboard)
-    setTimeout(() => {
-      router.push('/') // ili '/dashboard' kasnije
-    }, 800)
-
+    // redirect na Welcome stranicu
+    router.push('/welcome')
   } catch (error) {
-    errorMessage.value = error.message || t('auth.signin.messages.error')
+    errorMessage.value = error.message
   } finally {
     loading.value = false
   }
 }
 </script>
+
 
 
 
