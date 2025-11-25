@@ -10,6 +10,12 @@ import Apps from './pages/Apps.vue'
 import SignIn from './pages/SignIn.vue'
 import SignUp from './pages/SignUp.vue'
 import ResetPassword from './pages/ResetPassword.vue'
+import WelcomePage from './pages/WelcomePage.vue' 
+import ResetPasswordConfirm from './pages/ResetPasswordConfirm.vue'
+import VerifyEmail from './pages/VerifyEmail.vue'
+import VerifyEmailSuccess from './pages/VerifyEmailSuccess.vue'
+import VerifyEmailFailed from './pages/VerifyEmailFailed.vue'
+
 
 import AboutPage from './partials/footer/AboutPage.vue'
 import BlogPage from './partials/footer/BlogPage.vue'
@@ -253,8 +259,32 @@ const router = createRouter({
 {
   path: '/welcome',
   name: 'welcome',
-  component: () => import('../pages/WelcomePage.vue'),
-  meta: { requiresAuth: true },
+  component: WelcomePage,
+  meta: { layout: 'auth' }
+},
+{
+  path: '/reset-password/confirm',
+  name: 'reset-password-confirm',
+  component: ResetPasswordConfirm,
+  meta: { layout: 'auth' }
+},
+{
+  path: '/verify-email',
+  name: 'verify-email',
+  component: VerifyEmail,
+  meta: { layout: 'auth' }
+},
+{
+  path: '/verify-email/success',
+  name: 'verify-email-success',
+  component: VerifyEmailSuccess,
+  meta: { layout: 'auth' },
+},
+{
+  path: '/verify-email/failed',
+  name: 'verify-email-failed',
+  component: VerifyEmailFailed,
+  meta: { layout: 'auth' },
 },
   { path: '/about', 
     component: AboutPage,

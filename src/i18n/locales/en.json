@@ -427,11 +427,13 @@
     "extra": "More",
     "login": "Sign in",
     "register": "Sign up",
-    "language": "Language"
+    "language": "Language",
+    "dashboard": "Dashboard",
+    "logout": "Log out"
   },
   "about": {
     "title": "About Us",
-    "paragraph1": "Express Web is a small, focused team that builds custom web and e-commerce solutions. We don't chase 'quick wins' — our goal is sustainable software, a clear process, and measurable results.",
+    "paragraph1": "Profi Sajt is a small, focused team that builds custom web and e-commerce solutions. We don't chase 'quick wins' — our goal is sustainable software, a clear process, and measurable results.",
     "paragraph2": "Our practice includes modern frontend (Vue/React), backend (Laravel/PHP), multivendor systems, internationalization (i18n), automated deployment, and SEO standards. We believe in transparency — we don’t fake references or 'polish' results.",
     "paragraph3": "If you're building a product or want to improve sales and processes, let's start with small, deliverable parts, with clear goals and deadlines. After that, we scale iteratively."
   },
@@ -863,6 +865,7 @@
         "email": "you{'@'}profisajt.digital",
         "password": "********"
       },
+      "loginButton": "Sign In",
       "messages": {
         "success": "You are successfully signed in.",
         "error": "Invalid credentials. Please try again."
@@ -882,7 +885,56 @@
         "success": "If an account with that email exists, we have sent a password reset link.",
         "error": "There was a problem sending the reset link. Please try again."
       }
+    },
+    "verifyEmail": {
+      "title": "Verify your email address",
+      "subtitle": "We have sent a verification link to your email address. Please check your inbox and spam folder.",
+      "info": "Some features will not be available until you verify your email.",
+      "resendButton": "Resend verification email",
+      "loading": "Sending...",
+      "messages": {
+        "resent": "A new verification email has been sent.",
+        "error": "An error occurred while sending the email. Please try again."
+      },
+      "notReceived": "Didn’t receive the email after a few minutes?",
+      "resendLink": "Click here to resend.",
+      "backToLogin": "Back to login",
+
+      "successTitle": "Email successfully verified",
+      "successText": "Your account is now active. You can log in and use all features of the system.",
+      "goToLogin": "Proceed to login",
+
+      "failedTitle": "Invalid verification link",
+      "failedText": "The verification link has expired or is invalid. You can request a new verification email.",
+      "requestNew": "Request new verification email"
     }
+  },
+  "welcomePage": {
+  "hello": "Welcome back,",
+  "title": "Your account, ",
+  "subtitle": "Here you will soon see your projects, activity, and recommendations...",
+  "cta": {
+    "contact": "Contact us",
+    "explore": "Back to homepage"
+  },
+  "cards": {
+    "profile": {
+      "title": "Profile",
+      "text": "Coming soon: edit your name, email address, phone number and preferences."
+    },
+    "activity": {
+      "title": "Activity",
+      "text": "Overview of sent inquiries, agreed projects, and implementation status."
+    },
+    "security": {
+      "title": "Security",
+      "text": "Change password, review devices, and manage additional account protection."
+    }
+  },
+  "account": {
+    "loggedInAs": "You are logged in as",
+    "logout": "Log out",
+    "deleteDisabled": "Delete account (coming soon)"
   }
-  
+}
 }

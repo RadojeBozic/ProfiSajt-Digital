@@ -2,8 +2,8 @@
 import { useI18n } from 'vue-i18n'
 const { t } = useI18n()
 
-// Slika (postavi je u /src/assets)
-const imageUrl = new URL('../assets/about-illustration.jpg', import.meta.url).href
+// Slika (postavi je u /src/images)
+const imageUrl = new URL('../images/about-illustration.jpg', import.meta.url).href
 </script>
 
 <template>
@@ -12,7 +12,7 @@ const imageUrl = new URL('../assets/about-illustration.jpg', import.meta.url).hr
 
     <img
       :src="imageUrl"
-      alt="Express Web — about"
+      alt="Profi Sajt — about"
       class="rounded-xl w-full object-cover mb-3"
       style="max-height: 180px"
     />

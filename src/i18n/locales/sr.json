@@ -428,11 +428,13 @@
     "extra": "Više",
     "login": "Prijava",
     "register": "Registracija",
-    "language": "Jezik"
+    "language": "Jezik",
+    "dashboard": "Kontrolna tabla",
+    "logout": "Odjava"
   },
   "about": {
     "title": "O nama",
-    "paragraph1": "Express Web je mali, fokusiran tim koji razvija prilagođena web i e-commerce rešenja. Ne jurimo “brze pobede” — cilj nam je održiv softver, jasan proces i merljivi rezultati.",
+    "paragraph1": "Profi Sajt je mali, fokusiran tim koji razvija prilagođena web i e-commerce rešenja. Ne jurimo “brze pobede” — cilj nam je održiv softver, jasan proces i merljivi rezultati.",
     "paragraph2": "Naša praksa uključuje moderni frontend (Vue/React), backend (Laravel/PHP), multivendor, međunarodizaciju (i18n), automatizovan deploy i SEO standarde. Verujemo u transparentnost: zato ne izmišljamo reference i ne “šminkamo” rezultate.",
     "paragraph3": "Ako gradite proizvod ili želite da unapredite prodaju i procese — krenimo od malih, isporučivih celina, sa jasnim ciljevima i rokovima. Posle toga, iterativno skaliramo."
   },
@@ -865,6 +867,7 @@
         "email": "vi{'@'}profisajt.digital",
         "password": "********"
       },
+      "loginButton": "Prijavite se",
       "messages": {
         "success": "Uspešno ste prijavljeni.",
         "error": "Neispravni podaci. Pokušajte ponovo."
@@ -884,6 +887,28 @@
         "success": "Ako nalog sa tom email adresom postoji, poslali smo vam link za reset lozinke.",
         "error": "Došlo je do problema prilikom slanja linka. Pokušajte ponovo."
       }
+    },
+    "verifyEmail": {
+      "title": "Potvrdite email adresu",
+      "subtitle": "Poslali smo vam verifikacioni link na vašu email adresu. Molimo proverite inbox i spam folder.",
+      "info": "Bez potvrde email adrese neke funkcije neće biti dostupne.",
+      "resendButton": "Pošalji verifikacioni email ponovo",
+      "loading": "Slanje...",
+      "messages": {
+        "resent": "Novi verifikacioni email je poslat.",
+        "error": "Došlo je do greške prilikom slanja emaila. Pokušajte ponovo."
+      },
+      "notReceived": "Niste dobili email u roku od nekoliko minuta?",
+      "resendLink": "Kliknite ovde da pokušate ponovo.",
+      "backToLogin": "Nazad na prijavu",
+
+      "successTitle": "Email uspešno verifikovan",
+      "successText": "Vaš nalog je sada aktivan. Možete da se prijavite i koristite sve funkcionalnosti sistema.",
+      "goToLogin": "Nastavi na prijavu",
+
+      "failedTitle": "Link nije validan",
+      "failedText": "Verifikacioni link je istekao ili nije validan. Možete zatražiti novi verifikacioni email.",
+      "requestNew": "Zatraži novi verifikacioni email"
     }
   },
   "welcomePage": {

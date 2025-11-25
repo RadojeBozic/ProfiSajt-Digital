@@ -2,34 +2,100 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
+
 const { t } = useI18n()
 
+/* ---------------------------
+   FORM STATE
+----------------------------*/
 const form = ref({
   name: '',
+  username: '',
   email: '',
   phone: '',
   password: '',
 })
 
+/* ---------------------------
+   VALIDATION STATE
+----------------------------*/
+const errors = ref({
+  name: '',
+  username: '',
+  email: '',
+  password: '',
+  phone: '',
+})
+
 const loading = ref(false)
 const errorMessage = ref('')
 const successMessage = ref('')
+const verificationSent = ref(false)
 
-// Baza za API – čita iz Vite .env, fallback je direktan URL
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://api.profisajt.digital/api'
+/* ---------------------------
+   REGEX VALIDATION RULES
+----------------------------*/
+const usernameRegex = /^[a-z]{8,20}$/
+const passwordRegex =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^A-Za-z0-9]).{8,}$/
+
+/* ---------------------------
+   API ENDPOINTS
+----------------------------*/
+const API_BASE_URL =
+  import.meta.env.VITE_API_URL || 'https://api.profisajt.digital/api'
+
 const REGISTER_URL = `${API_BASE_URL.replace(/\/$/, '')}/register`
 
+/* ---------------------------
+   SUBMIT HANDLER
+----------------------------*/
 const onSubmit = async () => {
   loading.value = true
   errorMessage.value = ''
   successMessage.value = ''
+
+  // RESET FRONTEND ERRORS
+  errors.value = {
+    name: '',
+    username: '',
+    email: '',
+    password: '',
+    phone: '',
+  }
+
+  /* ---------------------------
+     FRONTEND VALIDATION
+  ----------------------------*/
+
+  // USERNAME VALIDATION
+  if (!usernameRegex.test(form.value.username)) {
+    errors.value.username =
+      'Korisničko ime mora imati 8–20 malih slova (bez brojeva i specijalnih znakova).'
+  }
+
+  // PASSWORD VALIDATION
+  if (!passwordRegex.test(form.value.password)) {
+    errors.value.password =
+      'Lozinka mora imati bar 8 karaktera, malo i veliko slovo, broj i specijalni znak.'
+  }
+
+  // If frontend validation fails, STOP here
+  if (errors.value.username || errors.value.password) {
+    loading.value = false
+    return
+  }
+
+  /* ---------------------------
+     SEND TO BACKEND
+  ----------------------------*/
 
   try {
     const res = await fetch(REGISTER_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Accept': 'application/json',
+        Accept: 'application/json',
       },
       body: JSON.stringify(form.value),
     })
@@ -41,9 +107,20 @@ const onSubmit = async () => {
     }
 
     successMessage.value = t('auth.signup.messages.success')
-    form.value = { name: '', email: '', phone: '', password: '' }
+    verificationSent.value = true
+
+    // RESET FORMA
+    form.value = {
+      name: '',
+      username: '',
+      email: '',
+      phone: '',
+      password: '',
+    }
+
   } catch (error) {
-    errorMessage.value = error.message || 'Došlo je do greške pri registraciji.'
+    errorMessage.value =
+      error.message || 'Došlo je do greške pri registraciji.'
   } finally {
     loading.value = false
   }
@@ -51,7 +128,9 @@ const onSubmit = async () => {
 </script>
 
 
+
 <template>
+ 
   <div class="flex flex-col min-h-screen overflow-hidden supports-[overflow:clip]:overflow-clip">
 
     <!-- Site header -->
@@ -108,6 +187,25 @@ const onSubmit = async () => {
                     />
                   </div>
 
+                  <!-- Username -->
+                <div>
+                  <label class="block text-sm text-gray-700 font-medium mb-1" for="username">
+                    Korisničko ime
+                  </label>
+                  <input
+                    id="username"
+                    v-model="form.username"
+                    class="form-input py-2 w-full"
+                    type="text"
+                    required
+                    pattern="[a-z]{8,20}"
+                    title="8–20 malih slova, bez brojeva i specijalnih znakova"
+                  />
+                  <p v-if="errors.username" class="mt-1 text-sm text-red-500">
+                    {{ errors.username }}
+                  </p>
+                </div>
+
                   <div>
                     <label class="block text-sm text-gray-700 font-medium mb-1" for="email">
                       {{ t('auth.signup.email') }}
@@ -149,6 +247,9 @@ const onSubmit = async () => {
                       required
                     />
                   </div>
+                    <p v-if="errors.password" class="mt-1 text-sm text-red-500">
+                      {{ errors.password }}
+                    </p>
                 </div>
 
                 <div class="space-y-3 mt-6">
@@ -163,6 +264,12 @@ const onSubmit = async () => {
 
                   <div class="italic text-sm text-gray-400 text-center">
                     {{ t('auth.signup.or') }}
+                  </div>
+
+                  <div v-if="verificationSent" class="italic text-sm text-green-500 text-center">
+                    <p v-if="verificationSent" class="text-green-600 mt-4">
+                      Na vaš email je poslat verifikacioni link. Proverite inbox.
+                    </p>
                   </div>
 
                   <button
@@ -228,12 +335,13 @@ const onSubmit = async () => {
               <span class="text-white font-medium text-[13px]">profisajt.digital</span>
             </div>
             <div class="text-gray-500 font-mono [&amp;_span]:opacity-0 text-sm transition duration-300">
-              <span class="text-gray-200 animate-[code-1_10s_infinite]">npm login</span> <span
-                class="animate-[code-2_10s_infinite]">--registry=https://npm.pkg.github.com</span><br>
-              <span class="animate-[code-3_10s_infinite]">--scope=@phanatic</span> <span
-                class="animate-[code-4_10s_infinite]">Successfully logged-in.</span><br><br>
-              <span class="text-gray-200 animate-[code-5_10s_infinite]">npm publish</span><br>
-              <span class="animate-[code-6_10s_infinite]">Package published.</span>
+              <span class="text-gray-200 animate-[code-1_10s_infinite]">Kreirajte pažljivo svoj nalog</span><br><br>
+              <span class="animate-[code-2_10s_infinite]">--Korisničko ime unesite malim slovima - 8 do 20 karaktera;</span><br><br>
+              <span class="animate-[code-3_10s_infinite]">--Lozinka mora imati najmanje 8 karaktera, uključujući specijalni karakter,<br>
+                 veliko slovo, malo slovo i broj;</span><br><br> 
+                 <span class="animate-[code-4_10s_infinite]">Popunite sva polja;</span><br><br>
+              <span class="text-gray-200 animate-[code-5_10s_infinite]">ProFi Sajt · Secure Login System</span><br>
+              <span class="animate-[code-6_10s_infinite]">Bezbednost na prvom mestu</span>
             </div>
           </div>
         </div>
